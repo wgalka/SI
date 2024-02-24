@@ -1,0 +1,383 @@
+.language-c .highlight {
+    background-color: #373b41
+}
+
+/* Comment  */
+.language-c .c {
+    color: #378e37
+}
+
+/* Error */
+/* .language-c .err {
+    color: #cc6666
+} */
+
+/* Keyword */
+/* .language-c .k {
+    color: #b294bb
+} */
+
+/* Literal */
+/* .language-c .l {
+    color: #de935f
+} */
+
+/* Name */
+/* .language-c .n,
+.language-c .h {
+    color: #ffffff
+} */
+
+/* Operator */
+/* .language-c .o {
+    color: #8abeb7
+} */
+
+/* Punctuation */
+/* .language-c .p {
+    color: #ffffff
+} */
+
+/* Comment.Multiline */
+.language-c .cm {
+    color: #378e37
+}
+
+/* Comment.Preproc */
+.language-c .cp {
+    color: #8d3c9f
+}
+
+/* Comment.Single */
+.language-c .c1 {
+    color: #378e37
+}
+
+/* Comment.Special */
+.language-c .cs {
+    color: #378e37
+}
+
+/* Generic.Deleted */
+/* .language-c .gd {
+    color: #cc6666
+} */
+
+/* Generic.Emph */
+/* .language-c .ge {
+    font-style: italic
+} */
+
+/* Generic.Heading */
+/* .language-c .gh {
+    color: #ffffff;
+    font-weight: bold
+} */
+
+/* Generic.Inserted */
+/* .language-c .gi {
+    color: #b5bd68
+} */
+
+/* Generic.Prompt */
+/* .language-c .gp {
+    color: #969896;
+    font-weight: bold
+} */
+
+/* Generic.Strong */
+/* .language-c .gs {
+    font-weight: bold
+} */
+
+/* Generic.Subheading */
+/* .language-c .gu {
+    color: #8abeb7;
+    font-weight: bold
+} */
+
+/* Keyword.Constant */
+/* .language-c .kc {
+    color: #b294bb
+} */
+
+/* Keyword.Declaration */
+/* .language-c .kd {
+    color: #b294bb
+} */
+
+/* Keyword.Namespace */
+/* .language-c .kn {
+    color: #8abeb7
+} */
+
+/* Keyword.Pseudo */
+/* .language-c .kp {
+    color: #b294bb
+} */
+
+/* Keyword.Reserved */
+/* .language-c .kr {
+    color: #b294bb
+} */
+
+/* Keyword.Type */
+/* .language-c .kt {
+    color: #f0c674
+} */
+
+/* Literal.Date */
+/* .language-c .ld {
+    color: #b5bd68
+} */
+
+/* Literal.Number */
+/* .language-c .m {
+    color: #de935f
+} */
+
+/* Literal.String */
+/* .language-c .s {
+    color: #b5bd68
+} */
+
+/* Name.Attribute */
+/* .language-c .na {
+    color: #81a2be
+} */
+
+/* Name.Builtin */
+/* .language-c .nb {
+    color: #ffffff
+} */
+
+/* Name.Class */
+/* .language-c .nc {
+    color: #f0c674
+} */
+
+/* Name.Constant */
+/* .language-c .no {
+    color: #cc6666
+} */
+
+/* Name.Decorator */
+/* .language-c .nd {
+    color: #8abeb7
+} */
+
+/* Name.Entity */
+/* .language-c .ni {
+    color: #ffffff
+} */
+
+/* Name.Exception */
+/* .language-c .ne {
+    color: #cc6666
+} */
+
+/* Name.Function */
+/* .language-c .nf {
+    color: #81a2be
+} */
+
+/* Name.Label */
+/* .language-c .nl {
+    color: #ffffff
+} */
+
+/* Name.Namespace */
+/* .language-c .nn {
+    color: #f0c674
+} */
+
+/* Name.Other */
+/* .language-c .nx {
+    color: #81a2be
+} */
+
+/* Name.Property */
+/* .language-c .py {
+    color: #ffffff
+} */
+
+/* Name.Tag */
+/* .language-c .nt {
+    color: #8abeb7
+} */
+
+/* Name.Variable */
+/* .language-c .nv {
+    color: #cc6666
+} */
+
+/* Operator.Word */
+/* .language-c .ow {
+    color: #8abeb7
+} */
+
+/* Text.Whitespace */
+/* .language-c .w {
+    color: #ffffff
+} */
+
+/* Literal.Number.Float */
+/* .language-c .mf {
+    color: #de935f
+} */
+
+/* Literal.Number.Hex */
+/* .language-c .mh {
+    color: #de935f
+} */
+
+/* Literal.Number.Integer */
+/* .language-c .mi {
+    color: #de935f
+} */
+
+/* Literal.Number.Oct */
+/* .language-c .mo {
+    color: #de935f
+} */
+
+/* Literal.String.Backtick */
+/* .language-c .sb {
+    color: #b5bd68
+} */
+
+/* Literal.String.Char */
+/* .language-c .sc {
+    color: #ffffff
+} */
+
+/* Literal.String.Doc */
+/* .language-c .sd {
+    color: #969896
+} */
+
+/* Literal.String.Double */
+/* .language-c .s2 {
+    color: #b5bd68
+} */
+
+/* Literal.String.Escape */
+/* .language-c .se {
+    color: #de935f
+} */
+
+/* Literal.String.Heredoc */
+/* .language-c .sh {
+    color: #b5bd68
+} */
+
+/* Literal.String.Interpol */
+/* .language-c .si {
+    color: #de935f
+} */
+
+/* Literal.String.Other */
+/* .language-c .sx {
+    color: #b5bd68
+} */
+
+/* Literal.String.Regex */
+/* .language-c .sr {
+    color: #b5bd68
+} */
+
+/* Literal.String.Single */
+/* .language-c .s1 {
+    color: #b5bd68
+} */
+
+/* Literal.String.Symbol */
+/* .language-c .ss {
+    color: #b5bd68
+} */
+
+/* Name.Builtin.Pseudo */
+/* .language-c .bp {
+    color: #ffffff
+} */
+
+/* Name.Variable.Class */
+/* .language-c .vc {
+    color: #cc6666
+} */
+
+/* Name.Variable.Global */
+/* .language-c .vg {
+    color: #cc6666
+} */
+
+/* Name.Variable.Instance */
+/* .language-c .vi {
+    color: #cc6666
+} */
+
+/* Literal.Number.Integer.Long */
+/* .language-c .il {
+    color: #de935f
+} */
+
+
+
+/* CSS */
+.button-55 {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-55:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.codeblock-label {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    /* font-weight: bold; */
+    font-style: italic;
+    font-size: 0.8em;
+    color: white;
+    background-color: #0039b3;
+    display: inline-block;
+    padding: 5px 16px 0px 16px;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+    /* background-color: #e5eeff; */
+    background-color: #eef3ff;
+}

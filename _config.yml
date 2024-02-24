@@ -1,0 +1,42 @@
+# plugins:
+#   - jekyll-relative-links
+# relative_links:
+#   enabled: true
+#   collections: true
+# include:
+#   - CONTRIBUTING.md
+#   - README.md
+#   - LICENSE.md
+#   - COPYING.md
+#   - CODE_OF_CONDUCT.md
+#   - CONTRIBUTING.md
+#   - ISSUE_TEMPLATE.md
+#   - PULL_REQUEST_TEMPLATE.md
+
+# highlighter: rouge
+plugins:
+    - jekyll-remote-theme
+
+# remote_theme: just-the-docs/just-the-docs
+# remote_theme: yous/whiteglass
+# theme: just-the-docs
+
+# markdown: GFM
+# markdown: GFM
+
+lsi: false                                # OBLIGATORY
+safe: true                                # OBLIGATORY
+source: [your repo's top level directory] # OBLIGATORY
+incremental: false                        # OBLIGATORY
+highlighter: rouge                        # OBLIGATORY
+gist:                                     # OBLIGATORY
+  noscript: false                         # OBLIGATORY
+kramdown:                                 # OBLIGATORY
+  math_engine: mathjax                    # OBLIGATORY
+  syntax_highlighter: rouge               # OBLIGATORY
+  # syntax_highlighter_opts:
+  #   css_class: 'highlight'
+  #   span:
+  #     line_numbers: false
+  #   block:
+  #     line_numbers: true
