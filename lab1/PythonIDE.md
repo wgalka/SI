@@ -1,6 +1,6 @@
-# Praca w środowisku Python
+## Praca w środowisku Python
 
-## Instalacja
+### Instalacja
 
 Python to wysokopoziomowy, interpretowany język programowania ogólnego przeznaczenia. Interpreter dostępny na różne systemy operacyjne można pobrać ze strony:
 
@@ -21,7 +21,7 @@ Dzięki temu interpreter będzie dostępny bezpośrednio w systemie (nie dodają
 3. Przy instalacji zaawansowanej warto też wybrać opcję dodania pythona do zmiennych środowiskowych (odpowiednik punktu 1 z instalacji ekspresowej).
 ![alt text](image-3.png)
 
-## IDE
+### IDE
 
 Praca z interpreterem możliwa jest z poziomu konsoli jednak można ułatwić sobie pracę korzystając z IDE(Zintegrowane środowisko programistyczne). Popularnym oprogramowaniem w tej kwesti jest:
 - [PyCharm](https://www.jetbrains.com/pycharm/)
@@ -29,9 +29,9 @@ Praca z interpreterem możliwa jest z poziomu konsoli jednak można ułatwić so
 - [Jupyter Notebooks](https://jupyter.org/)
 - [IDLE](https://docs.python.org/3/library/idle.html)
 
-### Praca w Pycharm
+#### Praca w Pycharm
 
-#### Tworzenie nowego projektu
+##### Tworzenie nowego projektu
 
 ![alt text](image-4.png)
 
@@ -44,13 +44,13 @@ Wirtualne środowisko odizoluje biblioteki użyte w projekcie od globalnego inte
 Po kliknięciu `Create` należy poczekać aż IDE zaindeksuje(niebieski pasek wczytywania w prawym dolnym rogu) i utworzy potrzebne katalogi i pliki. Pomyślnie utworzenie projektu będzie sygnalizowane wyświetleniem drzewa projektu z lewej strony
 ![](image-6.png)
 
-#### Tworzenie nowego skryptu
+##### Tworzenie nowego skryptu
 
 Aby utworzyć nowy skrypt python należy w drzewie projektu na głownym katalogu klinąć prawym przyciskiem myszy, a następnie `new` > `python file`. Wprowadzić nazwę skryptu i zatwierdzić klawiszem enter.
 
 ![alt text](image-7.png)
 
-#### Uruchomienie skryptu
+##### Uruchomienie skryptu
 
 W oknie ze skryptem kliknąć prawym klawiszem myszy a następnie wybrać opcję run.
 
@@ -59,7 +59,7 @@ W oknie ze skryptem kliknąć prawym klawiszem myszy a następnie wybrać opcję
 W dolnej części ekranu pojawi się konsola z rezultatem działania skryptu.
 ![alt text](image-9.png)
 
-#### Instalacja bibliotek
+##### Instalacja bibliotek
 
 W lewym dolnym rogu należy wybrać opcję `Python packages`
 
@@ -71,7 +71,7 @@ W oknie wyszukiwania należy wpisać nazwę poszukiwanej biblioteki np. `numpy`.
 
 > Wersję biblioteki należy dobrać do wersji Pythona. Najlepiej skorzystać z dokumentacji wybranej biblioteki w celu określenia z jaką wersją działa.
 
-#### Debugowanie programu
+##### Debugowanie programu
 
 W oknie z treścią programu należy zaznaczyć linię do której chcemy aby program się wykonywał a następnie wypisywał zawartość zmiennych w oknie oebugowania.
 
