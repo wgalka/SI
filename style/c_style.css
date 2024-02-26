@@ -384,7 +384,6 @@
 }
 
 p {
-    text-align: justify !important;
-    text-justify: auto !important;
-    background-color: #378e37;
+    text-align: justify;
+    text-justify: auto ;
 }
