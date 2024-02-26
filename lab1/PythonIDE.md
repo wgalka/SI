@@ -4,7 +4,7 @@
 
 Python to wysokopoziomowy, interpretowany język programowania ogólnego przeznaczenia. Interpreter dostępny na różne systemy operacyjne można pobrać ze strony:
 
-https://www.python.org/downloads/
+<https://www.python.org/downloads/>
 
 Podczas instalacji na systemie Windows ważnye jest:
 
