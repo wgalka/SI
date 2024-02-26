@@ -77,4 +77,4 @@ Poniżej znajdują się strony domowe obu bibliotek:
 
 ## Zadania
 
-
+[Utwórz](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) nowy projekt o nazwie Lab1. Następnie [zainstaluj](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) biblioteki `Numpy` oraz `Pandas` w odpowiedniej wersji.
