@@ -62,5 +62,19 @@ element_T = T[0][1][0]  # Odwołanie do elementu w pierwszym wymiarze, drugim wi
 
 Biblioteki NumPy i pandas są dwiema popularnymi bibliotekami w języku Python używanymi do pracy z danymi numerycznymi i analizy danych. Zapewniających wsparcie dla operacji na tablicach wielowymiarowych oraz funkcje matematyczne do pracy z tymi tablicami. Kod napisany z wykorzystaniem tych bibliotek wykonuje się znacznie szybciej niż kod napisany tylko z wykorzystaniem podstawowej składni python szczególnie przy dużych zbiorach danych. 
 
+Biblioteka Pandas bazuje w dużej mierze na bibliotece Numpy i rozszerza jej funkcjonalności. Umożliwia czytelniejsze dla użytkownika działania na macierzach przez np. selekcję danych przez nazwy kolumn. Zawiera też szereg funkcji umożliwiających wizualizację danych.
+
+Poniżej znajdują się strony domowe obu bibliotek:
+
+<https://numpy.org/>
+
+<https://pandas.pydata.org/>
+
+> Stosuj Numpy gdy chcesz uzyskać szybki kod
+
+> Stosuj Pandas jeśli przetwarzasz dane, często sprawdzasz zawartość macierzy i zależy ci na czytelnosci kodu (nazwa kolumny będzie więcej mówić użytkownikowi niż index)
+
+
+## Zadania
 
 
