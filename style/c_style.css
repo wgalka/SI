@@ -7,10 +7,6 @@
     color: #378e37
 }
 
-p {
-    text-align: justify;
-    background-color: #378e37;
-}
 
 /* Error */
 /* .language-c .err {
@@ -385,4 +381,9 @@ p {
 .markdown-body pre {
     /* background-color: #e5eeff; */
     background-color: #eef3ff;
+}
+
+p {
+    text-align: justify;
+    background-color: #378e37;
 }
