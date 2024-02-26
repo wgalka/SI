@@ -1,5 +1,6 @@
 # Python - podstawowe operacje
 
+## Macierze i Tensory
 W kontekście Sztucznej Inteligencji, macierze są fundamentalnym narzędziem do przechowywania i przetwarzania danych. Są strukturami danych składającymi się z wierszy i kolumn, które umożliwiają organizację danych w postaci tabelarycznej. W kontekście języka python macierz będą tworzyć listy zawarte w liście "opakowującej".
 
 <div class="codeblock-label">pure python</div>
@@ -54,4 +55,12 @@ T = [
 element_A = A[1][2]  # Odwołanie do elementu w drugim wierszu i trzeciej kolumnie macierzy A
 element_T = T[0][1][0]  # Odwołanie do elementu w pierwszym wymiarze, drugim wierszu i pierwszej kolumnie tensora T
 ```
+
+> W języku python dane indeksowane są od 0.
+
+## Numpy i Pandas
+
+Biblioteki NumPy i pandas są dwiema popularnymi bibliotekami w języku Python używanymi do pracy z danymi numerycznymi i analizy danych. Zapewniających wsparcie dla operacji na tablicach wielowymiarowych oraz funkcje matematyczne do pracy z tymi tablicami. Kod napisany z wykorzystaniem tych bibliotek wykonuje się znacznie szybciej niż kod napisany tylko z wykorzystaniem podstawowej składni python szczególnie przy dużych zbiorach danych. 
+
+
 
