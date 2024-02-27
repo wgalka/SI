@@ -70,7 +70,7 @@ Poniżej znajdują się strony domowe obu bibliotek:
 
 <https://pandas.pydata.org/>
 
-> Stosuj Numpy gdy chcesz uzyskać szybki kod
+> Stosuj Numpy gdy przetwarzasz duże dane i zależy ci na wydajności
 
 > Stosuj Pandas jeśli przetwarzasz dane, często sprawdzasz zawartość macierzy i zależy ci na czytelnosci kodu (nazwa kolumny będzie więcej mówić użytkownikowi niż index)
 
