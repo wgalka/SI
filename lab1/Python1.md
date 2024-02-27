@@ -169,10 +169,35 @@ X = np.array([[1, 2], [3, 4]])
 y = np.array([5, 6])
 ```
 
-#### Łączenie macierzy w pionie
+### Łączenie macierzy w pionie
 
 [Połacz macierze](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html) A oraz B tak aby utworzyły macierz o 4 wierszach i 2 kolumnach
 
-#### Łączenie macierzy w poziomie
+### Łączenie macierzy w poziomie
 
 [Połacz macierze](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html) A oraz B tak aby utworzyły macierz o 4 kolumnach i 2 wierszach
+
+## Zadania* 
+
+Zapisane są pomiary temperatury w różnych miastach w kolejnych miesiącach:
+
+```yaml
+"Miasto","Styczeń","Luty","Marzec","Kwiecień","Maj"
+"Warszawa",-2,0,5,10,15
+"Kraków",-4,-1,3,8,12
+"Gdańsk",0,2,6,11,16
+"Poznań",-1,1,4,9,14
+"Wrocław",-3,0,5,10,15
+```
+
+Za pomocą biblioteki NumPy w uzyskaj następujące informacje:
+
+1. Średnia temperatura dla każdego miasta.
+2. Najwyższa temperatura w każdym miesiącu dla każdego miasta.
+3. Miesiąc, w którym średnia temperatura była najwyższa we wszystkich miastach.
+4. Miesiąc, w którym wystąpiła największa różnica temperatur między miastami.
+5. Średnia temperatura dla wszystkich miast w każdym miesiącu.
+6. Miesiące, w których temperatura w danym mieście była wyższa niż średnia dla wszystkich miast.
+7. Różnica temperatur między kolejnymi miesiącami dla każdego miasta.
+
+

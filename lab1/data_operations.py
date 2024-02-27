@@ -21,3 +21,6 @@ pd_iris = pd.DataFrame(np_iris,
 classes = np_iris[:,4].copy()
 classes[1] = "xd"
 print(np_iris)
+
+
+
