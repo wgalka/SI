@@ -77,4 +77,102 @@ Poniżej znajdują się strony domowe obu bibliotek:
 
 ## Zadania
 
-[Utwórz](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) nowy projekt o nazwie Lab1. Następnie [zainstaluj](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) biblioteki `Numpy` oraz `Pandas` w odpowiedniej wersji.
+[Utwórz](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) nowy projekt o nazwie Lab1. Następnie [zainstaluj](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) biblioteki `Numpy` oraz `Pandas` w odpowiedniej wersji. 
+
+Dodaj import biblioteki [numpy](https://numpy.org/doc/stable/user/absolute_beginners.html#how-to-import-numpy) oraz [pandas](https://pandas.pydata.org/docs/user_guide/10min.html#minutes-to-pandas).
+
+### Konwersja danych "pure python" do numpy
+
+W projekcie [utwórz skrypt](https://si.lazysolutions.pl/lab1/PythonIDE.html#instalacja-bibliotek) `data_operations.py`. 
+
+Następnie utwórz zminną `iris_data` która będzie przechowywać dane na temat irysów w dwu wymiarowej tablicy.
+
+| Sepal Length | Sepal Width | Petal Length | Petal Width | Species        |
+|--------------|-------------|--------------|-------------|----------------|
+| 5.1          | 3.5         | 1.4          | 0.2         | Iris-setosa    |
+| 4.9          | 3.0         | 1.4          | 0.2         | Iris-setosa    |
+| 7.0          | 3.2         | 4.7          | 1.4         | Iris-versicolor|
+| 6.4          | 3.2         | 4.5          | 1.5         | Iris-versicolor|
+| 6.3          | 3.3         | 6.0          | 2.5         | Iris-virginica |
+| 5.8          | 2.7         | 5.1          | 1.9         | Iris-virginica |
+
+Zapoznaj się z dokumentacją:
+
+<https://numpy.org/doc/stable/reference/generated/numpy.array.html>
+
+Następnie utwórz zmienną `np_iris` do której przypiszesz dane ze zmiennej `iris_data` przekształcone na macierz numpy. Wypisz zmienną `np_iris` w konsoli za pomocą funkcji [`print`](https://docs.python.org/3/tutorial/inputoutput.html)
+
+Przykładowy rezultat w konsoli:
+![alt text](image-17.png)
+
+> Zauważ że dane są w postaci łańcuchów znaków o czym świadczą `'` okalające dane liczbowe aby możliwe było wykonanie na nich operacji arytmetycznych dane muszą mieć odpowiedni typ. W celu konwersji możliwe jest użycie parametru `dtype=object` w funkcji `np.array()` co oznacza, że każdy element tablicy NumPy będzie traktowany jako obiekt Pythona.
+
+### Konwersja do formatu Pandas
+
+Zapoznaj się z dokumentacją:
+
+<https://pandas.pydata.org/pandas-docs/version/2.1/reference/api/pandas.DataFrame.html>
+
+W skrypcie `data_operations.py` dodaj zmienną `pd_iris` do której przypiszesz zawartość zmiennej `iris_data` przekonwertowanej na do typu `DataFrame` tak aby po wyświetleniu zawartości zmiennej `pd_iris` rezultat był następujący (dodane są nazwy kolumn):
+
+![alt text](image-18.png)
+
+### Indeksowanie
+
+Zapoznaj się z [dokumentacją](https://numpy.org/doc/stable/user/basics.indexing.html) i przeanalizuj przykłady a następnie wykonaj poniższe polecenia:
+
+1. Utwórz zmienną `M` przez skopiowanie do niej 1 i 2 wiersza oraz 3 i 4 kolumny z macierzy `np_iris`
+
+2. Utwórz zmienną `v` przechowującą wektor (tablice 1 wymiarową) zawierający dane:
+
+```
+1, 2, 3, 4, 5, 6
+```
+
+następnie podmień dane z 4 kolumny macierzy `np_iris` na dane z utworzonego wektora.
+
+3. Utwórz zmienną `x` przechowującą co [drugą wartość](https://numpy.org/doc/stable/user/basics.indexing.html#:~:text=slice%20syntax%20is-,i%3Aj%3Ak,-where%20i%20is) z wektora `v` od tyłu.
+
+4. Z macierzy `np_iris` wybierz 1 wiersz a następnie przekształć go na kolumnę używając funkcji [`reshape`](https://numpy.org/doc/1.25/reference/generated/numpy.reshape.html) lub [`transpose`](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.T.html) ([`T`](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.T.html#)).
+
+5. Utwórz zmienną `iris_classes` w której z macierzy `np_iris` wybierz ostatnią kolumnę zawierającą gatunki irysów. Zmień dane pod 3,4,5 i 6 indeksem na "Iris-setosa". Czy po zmianie danych w `iris_classes` dane w `np_iris` również uległy zmianie? Spróbuj temu zapobiec używając funkcji [`copy`](https://numpy.org/doc/stable/reference/generated/numpy.copy.html).
+
+### Operacje na macierzach
+
+#### Dodawanie
+
+Mając podane macierze wyznacz [sumę](https://numpy.org/doc/stable/reference/routines.math.html) macierzy A + B:
+
+```python
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+```
+
+#### Mnożenie przez skalar
+
+[Pomnóż](https://numpy.org/doc/stable/reference/routines.math.html) macierz A przez liczbę 2
+
+#### Obliczanie średniej
+
+Oblicz [średnią](https://numpy.org/doc/stable/reference/routines.statistics.html) wartość 1 kolumny w macierzy B.
+
+#### Macierz odwrotna
+
+Wyznacz [macierz odwrotną](https://numpy.org/doc/stable/reference/routines.linalg.html#) do macierzy A
+
+#### Rozwiąż układ równań
+
+Mając poniższe dane [rozwiąż układ](https://numpy.org/doc/stable/reference/routines.linalg.html#) równań X z=y:
+
+```python
+X = np.array([[1, 2], [3, 4]])
+y = np.array([5, 6])
+```
+
+#### Łączenie macierzy w pionie
+
+[Połacz macierze](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html) A oraz B tak aby utworzyły macierz o 4 wierszach i 2 kolumnach
+
+#### Łączenie macierzy w poziomie
+
+[Połacz macierze](https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html) A oraz B tak aby utworzyły macierz o 4 kolumnach i 2 wierszach
