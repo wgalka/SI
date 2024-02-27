@@ -181,13 +181,13 @@ y = np.array([5, 6])
 
 Zapisane są pomiary temperatury w różnych miastach w kolejnych miesiącach:
 
-```yaml
+```csv
 "Miasto","Styczeń","Luty","Marzec","Kwiecień","Maj"
 "Warszawa",-2,0,5,10,15
-"Kraków",-4,-1,3,8,12
-"Gdańsk",0,2,6,11,16
-"Poznań",-1,1,4,9,14
-"Wrocław",-3,0,5,10,15
+"Kraków",-4,-1,3,10,8
+"Gdańsk",0,2,6,11,12
+"Poznań",-1,1,4,9,8
+"Wrocław",-3,0,5,1,12
 ```
 
 Za pomocą biblioteki NumPy w uzyskaj następujące informacje:
