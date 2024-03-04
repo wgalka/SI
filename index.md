@@ -5,6 +5,8 @@
 
 <a href="lab1/Python1.html">Python - podstawowe operacje</a>
 
+### Lab2
+<a href="lab2/.html">...</a>
 
 ## Zbiory danych
 
