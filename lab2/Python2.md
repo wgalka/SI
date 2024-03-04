@@ -37,8 +37,9 @@ Znajdz ile występuje braków danych w każdej z kolumn osobna. <https://numpy.o
 ### Wykresy
 
 Jedną z najpopularniejszych opcji tworzenia wykresów jest biblioteka [`Matplotlib`](https://matplotlib.org/stable/).
+Zawiera kilkanaście typów wykresów 2D które można dostosować do własnych potrzeb:
 
-<iframe src="https://matplotlib.org/stable/plot_types/index.html"> </iframe>
+<iframe class="container-lg" src="https://matplotlib.org/stable/plot_types/index.html"> </iframe>
 
 
 
