@@ -1,5 +1,15 @@
 ## Python - wykresy
 
+## Zagadnienia
+
+1. Wczytywanie danych w bibliotece Pandas i Numpy.
+
+2. Radzenie sobie z brakującymi warotściami, zamiana brakujących wartości na dane liczbowe lub łańcuchy znaków.
+
+3. Tworzenie prostych wykresów różnego typu, stylowanie wykresów.
+
+4. Tworzenie kilku wykresów na jednym obrazku.
+
 ### Wczytanie danych
 
 W zależności od charakteru, przeznaczenia oraz potrzeb użytkowników istnieje wiele formatów przechowywania danych, które zostały zaprojektowane tak, aby zapewnić skuteczną organizację, szybki dostęp i wydajne przetwarzanie. Najczęściej dane są przechowywane w plikach tekstowych o określonym schemacie np.:

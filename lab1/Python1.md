@@ -1,5 +1,15 @@
 # Python - podstawowe operacje
 
+## Zagadnienia
+
+1. Tworzenie macierzy wielowymiarowych w bibliotekach numpy i pandas
+
+2. Indeksowanie w bibliotekach numpy i pandas - wybieranie wskazanych wierszy oraz kolumn.
+
+3. Operacje na macierzach - mnożenie, transponowanie itp.
+
+4. Wyliczanie statystyk - średnie, mediany itp. dla zadanego wiersza, kolumny, całej macierzy.
+
 ## Macierze i Tensory
 W kontekście Sztucznej Inteligencji, macierze są fundamentalnym narzędziem do przechowywania i przetwarzania danych. Są strukturami danych składającymi się z wierszy i kolumn, które umożliwiają organizację danych w postaci tabelarycznej. W kontekście języka python macierz będą tworzyć listy zawarte w liście "opakowującej".
 
