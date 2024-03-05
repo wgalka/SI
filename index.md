@@ -6,7 +6,7 @@
 <a href="lab1/Python1.html">Python - podstawowe operacje</a>
 
 ### Lab2
-<a href="lab2/python2.html">Python - wykresy</a>
+<a href="lab2/Python2.html">Python - wykresy</a>
 
 ## Zbiory danych
 
