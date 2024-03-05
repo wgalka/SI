@@ -27,7 +27,7 @@ oraz umożliwiające zapis macierzy numpy do pliku binarnego co umożliwia poźn
 
 <https://numpy.org/doc/stable/reference/routines.io.html#text-files>
 
-O wiele więcej funkcji do odczytu popularnych formatów przechowywania danych ma biblioteka Pandas:
+O wiele więcej i prostszych w obsłudze funkcji do odczytu popularnych formatów przechowywania danych ma biblioteka Pandas:
 
 <https://pandas.pydata.org/pandas-docs/stable/reference/io.html>
 
@@ -41,7 +41,7 @@ Następnie utwórz projekt `Lab2` zawierający skrypt `main.py`. Następnie pobi
 
 Wczytaj pliki najpierw za pomocą funkcji dostępnych w bibliotece `numpy` a następnie `pandas`. Wskaż problemy występujące podczas korzystania z bibliotek. Jeden ze zbiorów danych zawiera brakujące wartości. Jak z brakami radzą sobie obydwie biblioteki?
 
-Znajdz ile występuje braków danych w każdej z kolumn osobna. <https://numpy.org/doc/stable/reference/generated/numpy.isnan.html>
+Znajdz ile występuje braków danych w każdej z kolumn. <https://numpy.org/doc/stable/reference/generated/numpy.isnan.html>
 
 
 ### Wykresy
