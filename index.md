@@ -24,7 +24,7 @@
 
 ## Harmonogram zajęć
 
-<a href = "hatmlnogram2024.html">Harmonogram 2024</a>
+<a href = "harmonogram2024.html">Harmonogram 2024</a>
 
 
 
