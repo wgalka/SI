@@ -22,5 +22,9 @@
 
 <https://cloud.google.com/bigquery/public-data/>
 
+## Harmonogram zajęć
+
+<a href = "hatmlnogram2024.html">Harmonogram 2024</a>
+
 
 
