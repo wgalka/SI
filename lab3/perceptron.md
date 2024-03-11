@@ -6,3 +6,7 @@
 
 ![](perceptron.svg)
 
+#### Funkcje aktywacji
+
+
+
