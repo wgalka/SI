@@ -8,6 +8,9 @@
 ### Lab2
 <a href="lab2/Python2.html">Python - wykresy</a>
 
+### Lab3
+<a href="lab3/perceptron.html">Perceptron - implementacja i możliwości</a>
+
 ## Zbiory danych
 
 <https://www.kaggle.com/datasets>
