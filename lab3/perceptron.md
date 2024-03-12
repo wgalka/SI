@@ -95,11 +95,11 @@ Przyjmiemy dwa zbiory uczace - brakmi OR oraz XOR. Nasze zbiory danych składać
      
 3. Wczytaj zbiory danych OR oraz XOR. Nastepnie utwórz obiekt klasy `Perceptron` z ustalonymi wagami oraz biasem np. [0.5, 0.5] 0.5. Wykorzystaj poniższą funkcję do graficznej wizualizacji czy perceptron z tak zainicjalizowanymi wagami oraz biasem będzie w stanie poradzić sobie z problemem XOR.
 
-    [or.data](lab3/or.data)
-    [or.labels](lab3/or.labels)
+    -[or.data](or.data)
+    -[or.labels](or.labels)
 
-    [xor.data](lab3/xor.data)
-    [xor.labels](lab3/xor.labels)
+    -[xor.data](xor.data)
+    -[xor.labels](xor.labels)
 
     Następnie modyfikuj bias oraz wagi w serii eksperymentów. Przeanalizuj wykresy po modyfikacji wag oraz biasu i określ jaki mają wpływ na uzyskane rezultaty?
 
