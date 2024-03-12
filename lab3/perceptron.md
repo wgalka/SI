@@ -52,11 +52,11 @@ Uczenie perceptronu polega na aktualizacji wag oraz wartości bias. Proces uczen
 
     gdzie
 
-    - $$w_i$$ - to waga dla i-tego wejścia,
+    - $w_i$ - to waga dla i-tego wejścia,
     - η - współczynnik uczenia (learning rate),
     - y - rzeczywista etykieta,
-    - $$\hat(y)$$ - przewidywana etykieta,
-    - $$x_i$$ - i-te wejście,
+    - $\hat{y}$ - przewidywana etykieta,
+    - $x_i$ - i-te wejście,
     - b - bias.
 
 6. **Powtarzanie procesu:** Proces korekty wag i biasu na podstawie kolejnych próbek danych treningowych jest powtarzany przez wiele **epok (iteracji)** lub do momentu osiągnięcia zadowalającej wydajności na danych treningowych.
@@ -94,6 +94,12 @@ Przyjmiemy dwa zbiory uczace - brakmi OR oraz XOR. Nasze zbiory danych składać
     - update_weights_and_bias(error, input_data) - implementacja **korekty wag i biasu:**
      
 3. Wczytaj zbiory danych OR oraz XOR. Nastepnie utwórz obiekt klasy `Perceptron` z ustalonymi wagami oraz biasem np. [0.5, 0.5] 0.5. Wykorzystaj poniższą funkcję do graficznej wizualizacji czy perceptron z tak zainicjalizowanymi wagami oraz biasem będzie w stanie poradzić sobie z problemem XOR.
+
+    [or.data](lab3/or.data)
+    [or.labels](lab3/or.labels)
+
+    [xor.data](lab3/xor.data)
+    [xor.labels](lab3/xor.labels)
 
     Następnie modyfikuj bias oraz wagi w serii eksperymentów. Przeanalizuj wykresy po modyfikacji wag oraz biasu i określ jaki mają wpływ na uzyskane rezultaty?
 
