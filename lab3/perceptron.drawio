@@ -1,96 +1,102 @@
-<mxfile host="app.diagrams.net" modified="2024-03-11T13:25:10.368Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="KHKL9MkBTYG_PaGPeUu0" version="24.0.4" type="device">
-  <diagram name="Page-1" id="p11yJfKpYmfvlJx66cXs">
-    <mxGraphModel dx="1146" dy="715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="FpsaEItuhfpJyshoHaDy-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="110" width="120" height="400" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="110" width="120" height="400" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-1" target="FpsaEItuhfpJyshoHaDy-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-1" value="&lt;div&gt;Wejście 1&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#331A00;fillColor=#331A00;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="110" y="140" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-2" target="FpsaEItuhfpJyshoHaDy-7">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-2" value="&lt;div&gt;Wejście 2&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#331A00;fillColor=#331A00;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="110" y="270" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-4" target="FpsaEItuhfpJyshoHaDy-6">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-4" value="&lt;div&gt;Wejście 3&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#331A00;fillColor=#331A00;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="110" y="400" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-5" target="FpsaEItuhfpJyshoHaDy-11">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-5" value="&lt;div&gt;Waga 1&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#660033;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="280" y="140" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-6" target="FpsaEItuhfpJyshoHaDy-11">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-6" value="&lt;div&gt;Waga 3&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#660033;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="280" y="400" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-7" target="FpsaEItuhfpJyshoHaDy-11">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-7" value="&lt;div&gt;Waga 2&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#660033;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="280" y="270" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="720" y="280" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-10" value="Funkcja&lt;br&gt;Aktywacji" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#003300;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="550" y="230" width="100" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-11" value="&lt;div align=&quot;left&quot;&gt;Funkcja&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Sumująca&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;align=left;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
-          <mxGeometry x="425" y="190" width="85" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="FpsaEItuhfpJyshoHaDy-11" target="FpsaEItuhfpJyshoHaDy-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="FpsaEItuhfpJyshoHaDy-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="30" y="180" as="sourcePoint" />
-            <mxPoint x="450" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="30" y="309.5" as="sourcePoint" />
-            <mxPoint x="110" y="309.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="30" y="439.5" as="sourcePoint" />
-            <mxPoint x="110" y="439.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-27" value="Wektor liczb wejściowych. Są to na przykład współrzędne x, y, z punktu w 3 wymiarach." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="75" y="30" width="150" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-28" value="Wektor wag - zazwyczaj liczb z przedziału [0,1]. Waga decyduje jak bardzo dana wartość wejściowa pobudza neuron. " style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="250" y="30" width="150" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-29" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Funkcja Sumująca&lt;br&gt;&lt;/h1&gt;&lt;p&gt;W bloku funkcji sumującej wejścia neuronu mnożone są przez wektor wag. Następnie otrzymane wartości są sumowane, a uzyskana wartość jest przekazywana do Funkcji Aktywacji&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="420" y="50" width="275" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="FpsaEItuhfpJyshoHaDy-31" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Funkcja Aktywacji&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Wynik funkcji sumującej chcemy zamienić na decyzję. Przykładowo w klasyfikacji binarnej chcemy uzyskać jako wyjście neuronu liczby 0 lub 1. W tym celu możliwe jest zastosowanie funkcji która jeśli wynik Funkcji Sumujacej jest powyżej 0 zwróci 1, natomiast w przypadku wyniku mniejszego od 0 zwróci 0.&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="1">
-          <mxGeometry x="455" y="340" width="290" height="140" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="p11yJfKpYmfvlJx66cXs">
+        <mxGraphModel dx="596" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="110" width="120" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="110" width="120" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FpsaEItuhfpJyshoHaDy-1" target="FpsaEItuhfpJyshoHaDy-5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-1" value="&lt;div&gt;Wejście 1&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#331A00;fillColor=#331A00;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="140" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="FpsaEItuhfpJyshoHaDy-2" target="FpsaEItuhfpJyshoHaDy-7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-2" value="&lt;div&gt;Wejście 2&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#331A00;fillColor=#331A00;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="270" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FpsaEItuhfpJyshoHaDy-4" target="FpsaEItuhfpJyshoHaDy-6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-4" value="&lt;div&gt;Wejście 3&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#331A00;fillColor=#331A00;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="400" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="FpsaEItuhfpJyshoHaDy-5" target="FpsaEItuhfpJyshoHaDy-11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-5" value="&lt;div&gt;Waga 1&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#660033;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="140" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="FpsaEItuhfpJyshoHaDy-6" target="FpsaEItuhfpJyshoHaDy-11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-6" value="&lt;div&gt;Waga 3&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#660033;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="400" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FpsaEItuhfpJyshoHaDy-7" target="FpsaEItuhfpJyshoHaDy-11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-7" value="&lt;div&gt;Waga 2&lt;/div&gt;&lt;div&gt;(Liczba)&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#660033;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="270" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="FpsaEItuhfpJyshoHaDy-10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="720" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-10" value="Funkcja&lt;br&gt;Aktywacji" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#003300;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="230" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-11" value="&lt;div align=&quot;left&quot;&gt;Funkcja&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Sumująca&lt;/div&gt;" style="triangle;whiteSpace=wrap;html=1;align=left;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="190" width="85" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="FpsaEItuhfpJyshoHaDy-11" target="FpsaEItuhfpJyshoHaDy-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="FpsaEItuhfpJyshoHaDy-1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="30" y="180" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="30" y="309.5" as="sourcePoint"/>
+                        <mxPoint x="110" y="309.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="30" y="439.5" as="sourcePoint"/>
+                        <mxPoint x="110" y="439.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-27" value="Wektor liczb wejściowych. Są to na przykład współrzędne x, y, z punktu w 3 wymiarach." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="30" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-28" value="Wektor wag - zazwyczaj liczb z przedziału [0,1]. Waga decyduje jak bardzo dana wartość wejściowa pobudza neuron. " style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="30" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-29" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Funkcja Sumująca&lt;br&gt;&lt;/h1&gt;&lt;p&gt;W bloku funkcji sumującej wejścia neuronu mnożone są przez wektor wag. Następnie otrzymane wartości są sumowane, a uzyskana wartość jest przekazywana do Funkcji Aktywacji.&lt;br&gt;&lt;/p&gt;&lt;p&gt;Często przed przejściem do Funkcji Aktywacji do warotści otrzymanej z funkcji sumującej dodaje się Bias.&amp;nbsp;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="30" width="305" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="FpsaEItuhfpJyshoHaDy-31" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Funkcja Aktywacji&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Wynik funkcji sumującej chcemy zamienić na decyzję. Przykładowo w klasyfikacji binarnej chcemy uzyskać jako wyjście neuronu liczby 0 lub 1. W tym celu możliwe jest zastosowanie funkcji która jeśli wynik Funkcji Sumujacej jest powyżej 0 zwróci 1, natomiast w przypadku wyniku mniejszego od 0 zwróci 0.&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="435" y="370" width="290" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="FpsaEItuhfpJyshoHaDy-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="b&lt;br&gt;(bias)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="190" width="50" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
