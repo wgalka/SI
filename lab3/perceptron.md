@@ -52,11 +52,11 @@ Uczenie perceptronu polega na aktualizacji wag oraz wartości bias. Proces uczen
 
     gdzie
 
-    - $w_i$ - to waga dla i-tego wejścia,
+    - $$w_i$$ - to waga dla i-tego wejścia,
     - η - współczynnik uczenia (learning rate),
     - y - rzeczywista etykieta,
-    - $\hat(y)$ - przewidywana etykieta,
-    - $x_i$ - i-te wejście,
+    - $$\hat(y)$$ - przewidywana etykieta,
+    - $$x_i$$ - i-te wejście,
     - b - bias.
 
 6. **Powtarzanie procesu:** Proces korekty wag i biasu na podstawie kolejnych próbek danych treningowych jest powtarzany przez wiele **epok (iteracji)** lub do momentu osiągnięcia zadowalającej wydajności na danych treningowych.
