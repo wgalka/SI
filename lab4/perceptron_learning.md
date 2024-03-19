@@ -138,13 +138,41 @@ Poniżej znajduje się kilka popularnych funkcji celu, które są stosowane w r�
 ### Zadanie 1
 Opracować program do uczenia reguł bramki NAND pojedynczego dwuwejściowego sztucznego neuronu z unipolarną funkcją przejścia. Uczenie zrealizować w oparciu o regułę Hebba a następnie perceptronową.
 
-- Proces uczenia wymaga określenia funkcji celu oraz podawania kolejnych wektorów uczących wraz z odpowiadającymi im odpowiedziami w kolejności losowej.
+- Rozważamy pojedynczy sztuczny neuron, który ma nauczyć się funkcji logicznej bramki NAND. Bramka NAND zwraca wartość logiczną prawdy (True) tylko wtedy, gdy oba wejścia są fałszywe (False), w przeciwnym razie zwraca wartość fałszu (False).
+
+- Neuron będzie korzystać z unipolarnej funkcji przejścia. Wartości wyjściowe będą 0 lub 1, co odpowiada False lub True w kontekście bramki NAND.
+
+- Proces uczenia będzie realizowany w dwóch etapach: najpierw zastosujemy regułę Hebba, a następnie uczenie perceptronowe.
+
+- Celem jest nauczenie neuronu tak, aby zwracał poprawne wartości bramki NAND dla różnych kombinacji wejść.
+
+- Podczas procesu uczenia będziemy prezentować dane uczące w losowej kolejności.
+
+Przygotowany program powinien realizować powyższe wymagania, a także umożliwiać testowanie nauczonego neuronu na różnych kombinacjach wejść.
 
 ### Zadanie 2
-Sprawdzić działanie nauczonego w zadaniu 1 neuronu – opracować program, który w oparciu o wzór opisujący działanie neuronu wyznaczy odpowiedzi wszystkich możliwych wektorów wejściowych. Porównać uzyskane wyniki z oczekiwanymi odpowiedziami.
+Opracować program, który w oparciu o wzór opisujący działanie neuronu wyznaczy odpowiedzi dla wszystkich możliwych wektorów wejściowych. Następnie porównać uzyskane wyniki z oczekiwanymi odpowiedziami.
+
+- Rozważamy neuron, który został nauczony nauczyć się funkcji logicznej bramki NAND. Neuron ten będzie wykorzystywał unipolarną funkcję przejścia, zwracając wartości 0 lub 1 w zależności od swojego stanu.
+
+- Opracuj program, który na podstawie wzoru opisującego działanie neuronu wyznaczy odpowiedzi dla wszystkich możliwych wektorów wejściowych. Następnie program porówna uzyskane wyniki z oczekiwanymi odpowiedziami.
+
+- Porównaj wyniki uzyskane przez neuron dla wszystkich możliwych wektorów wejściowych z oczekiwanymi odpowiedziami dla bramki NAND. Sprawdź, czy neuron poprawnie realizuje funkcję bramki NAND dla różnych kombinacji wejść.
+
+Przygotowany program powinien umożliwiać testowanie neuronu na wszystkich możliwych kombinacjach wejść oraz porównywanie uzyskanych wyników z oczekiwanymi odpowiedziami.
 
 ### Zadanie 3
-Zbadać wpływ wartości współczynnika uczenia na przebieg procesu uczenia i efektywności działania sieci. W tym celu dla trzech różnych wartości współczynnika uczenia (różniących się o rząd wielkości) wykonać po 10 prób uczenia wyniki zebrać w tabelce i skomentować.
+Badanie wpływu wartości współczynnika uczenia na przebieg procesu uczenia i efektywność działania sieci.
+
+- Celem zadania jest zbadanie, jak różne wartości współczynnika uczenia wpływają na przebieg procesu uczenia oraz efektywność działania sieci neuronowej.
+
+- Dla trzech różnych wartości współczynnika uczenia (różniących się o rząd wielkości), należy przeprowadzić po 10 prób uczenia.
+
+- Wyniki każdej próby uczenia należy zebrac w tabelce, zawierającej informacje o wartości współczynnika uczenia, liczbie epok, funkcji kosztu (błędu) oraz efektywności sieci.
+
+- Na podstawie zebranych danych, należy dokonać analizy i komentarza, omawiając wpływ różnych wartości współczynnika uczenia na proces uczenia oraz skuteczność sieci neuronowej.
+
+Ostatecznie, sporządzona tabela powinna umożliwić zrozumienie, jak wartość współczynnika uczenia wpływa na proces uczenia oraz jakość działania sieci neuronowej.
 
 | Lp. | Ilość powtórzeń uczenia                       | 
 |-----|------------------------------------------------|
@@ -164,7 +192,19 @@ Zbadać wpływ wartości współczynnika uczenia na przebieg procesu uczenia i e
 
 
 ### Zadanie 4
-Zbadać wpływ błędu końcowego (założonej wartości funkcji celu) na przebieg procesu uczenia i efektywności działania sieci. W tym celu dla trzech różnych wartości funkcji celu wykonać po 5 prób uczenia wyniki zebrać w tabelce i skomentować. Wzory funkcji celu znaleźć w internecie.
+
+Badanie wpływu błędu końcowego (założonej wartości funkcji celu) na przebieg procesu uczenia i efektywność działania sieci.
+
+- Celem zadania jest zbadanie, jak różne wartości błędu końcowego, określonej jako założona wartość funkcji celu, wpływają na przebieg procesu uczenia oraz efektywność działania sieci neuronowej.
+
+- Dla trzech różnych wartości funkcji celu, należy przeprowadzić po 5 prób uczenia.
+
+- Wyniki każdej próby uczenia należy zebrać w tabelce, zawierającej informacje o wartości funkcji celu, liczbie epok, błędzie końcowym oraz efektywności sieci.
+
+- Na podstawie zebranych danych, należy dokonać analizy i komentarza, omawiając wpływ różnych wartości błędu końcowego na proces uczenia oraz skuteczność sieci neuronowej.
+
+Ostatecznie, sporządzona tabela powinna umożliwić zrozumienie, jak wartość błędu końcowego wpływa na proces uczenia oraz jakość działania sieci neuronowej.
+
 
 
 
