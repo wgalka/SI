@@ -11,6 +11,10 @@
 ### Lab3
 <a href="lab3/perceptron.html">Perceptron - implementacja i możliwości</a>
 
+### Lab4
+<a href="lab4/perceptron_learning.html">Perceptron - uczenie perceptronu</a>
+
+
 ## Zbiory danych
 
 <https://www.kaggle.com/datasets>
