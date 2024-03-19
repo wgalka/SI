@@ -197,7 +197,7 @@ Badanie wpływu błędu końcowego (założonej wartości funkcji celu) na przeb
 
 - Celem zadania jest zbadanie, jak różne wartości błędu końcowego, określonej jako założona wartość funkcji celu, wpływają na przebieg procesu uczenia oraz efektywność działania sieci neuronowej.
 
-- Dla trzech różnych wartości funkcji celu, należy przeprowadzić po 5 prób uczenia.
+- Dla trzech różnych wartości (0.1, 0.01, 0.001) funkcji celu, należy przeprowadzić po 5 prób uczenia.
 
 - Wyniki każdej próby uczenia należy zebrać w tabelce, zawierającej informacje o wartości funkcji celu, liczbie epok, błędzie końcowym oraz efektywności sieci.
 
