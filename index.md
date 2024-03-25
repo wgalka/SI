@@ -14,6 +14,8 @@
 ### Lab4
 <a href="lab4/perceptron_learning.html">Perceptron - uczenie perceptronu</a>
 
+### Lab5
+<a href="lab5/back_propagation.html">Perceptron - uczenie perceptronu</a>
 
 ## Zbiory danych
 
