@@ -14,9 +14,7 @@ Dobór odpowiednich funkcji aktywacji dla neuronów jest ważnym zagadnieniem. W
 
 Jest to istotne, aby uniknąć zastosowania samych funkcji liniowych we wszystkich warstwach, ponieważ sieć wielowarstwowa z samymi funkcjami liniowymi może zostać zastąpiona siecią jednowarstwową.
 
-Poniżej znajduje się piaskownica na której można sprawdzić powyższe twierdzenie:
 
-<iframe class="container-lg" src="https://playground.tensorflow.org/"> </ifame>
 
 ### Uczenie sieci
 
@@ -114,4 +112,6 @@ Jednym z głównych wyzwań związanych z zastosowaniem tej metody jest optymali
 ![alt text](zad3.svg)
 
 
+Poniżej znajduje się piaskownica na której można sprawdzić czy złożenie liniowych funkcji aktywacji daje funkcję liniową:
 
+<iframe class="container-lg" src="https://playground.tensorflow.org/"> </ifame>
