@@ -19,7 +19,8 @@ Poniżej znajduje się piaskownica na której można sprawdzić powyższe twierd
 <iframe
 width="100%"
 height="100%"
-  height="200" src=https://playground.tensorflow.org/>
+src=https://playground.tensorflow.org/>
+</ifame>
 
 ### Uczenie sieci
 
