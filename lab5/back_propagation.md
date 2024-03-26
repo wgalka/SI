@@ -14,6 +14,12 @@ Dobór odpowiednich funkcji aktywacji dla neuronów jest ważnym zagadnieniem. W
 
 Jest to istotne, aby uniknąć zastosowania samych funkcji liniowych we wszystkich warstwach, ponieważ sieć wielowarstwowa z samymi funkcjami liniowymi może zostać zastąpiona siecią jednowarstwową.
 
+Poniżej znajduje się piaskownica na której można sprawdzić powyższe twierdzenie:
+
+<iframe
+width="100%"
+  height="200" src=https://playground.tensorflow.org/>
+
 ### Uczenie sieci
 
 Uczenie sieci jednokierunkowych może odbywać się w trybie nadzorowanym lub nienadzorowanym. W trybie nadzorowanym konieczna jest znajomość oczekiwanych odpowiedzi neuronów w warstwie wyjściowej, co stanowi wyzwanie, gdyż dla warstw ukrytych te odpowiedzi nie są znane. Przez wiele lat ograniczenie to uniemożliwiało efektywne uczenie sieci wielowarstwowych. Jednakże opracowanie metody wstecznej propagacji błędu (backpropagation), która pozwala matematycznie wyznaczyć błąd popełniany przez neurony w warstwach ukrytych na podstawie błędu warstwy wyjściowej, umożliwiło skuteczne wykorzystanie reguł uczenia nadzorowanego do treningu sieci wielowarstwowych. Dzięki tej metodzie możliwe jest dostosowywanie wag neuronów w warstwach ukrytych, co jest kluczowe dla efektywnego uczenia się sieci. Metoda wstecznej propagacji błędu jest obecnie powszechnie stosowana w uczeniu sieci wielowarstwowych.
