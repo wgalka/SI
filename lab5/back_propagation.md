@@ -114,4 +114,4 @@ Jednym z głównych wyzwań związanych z zastosowaniem tej metody jest optymali
 
 Poniżej znajduje się piaskownica na której można sprawdzić czy złożenie liniowych funkcji aktywacji daje funkcję liniową:
 
-<iframe class="container-lg" src="https://playground.tensorflow.org/"> </ifame>
+<iframe width="100%" height="800px" src="https://playground.tensorflow.org/"> </ifame>
