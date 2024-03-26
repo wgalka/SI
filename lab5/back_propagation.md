@@ -17,9 +17,9 @@ Jest to istotne, aby uniknąć zastosowania samych funkcji liniowych we wszystki
 Poniżej znajduje się piaskownica na której można sprawdzić powyższe twierdzenie:
 
 <iframe
-width="100%"
-height="800px"
+class="container-lg"
 src="https://playground.tensorflow.org/">
+
 </ifame>
 
 ### Uczenie sieci
@@ -116,3 +116,6 @@ Jednym z głównych wyzwań związanych z zastosowaniem tej metody jest optymali
 6. Skomentować uzyskane rezultaty.
 
 ![alt text](zad3.svg)
+
+
+
