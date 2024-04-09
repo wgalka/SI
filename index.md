@@ -15,7 +15,10 @@
 <a href="lab4/perceptron_learning.html">Perceptron - uczenie perceptronu</a>
 
 ### Lab5
-<a href="lab5/back_propagation.html">Perceptron - uczenie perceptronu</a>
+<a href="lab5/back_propagation.html">Sieci wielowarstwowe i algorytm wstecznej propagacji błędu</a>
+
+### Lab6
+<a href="lab6/crossvalidation.html">Udoskonalenia backpropagaction, preprocesing danych oraz badanie skuteczności modelu</a>
 
 ## Zbiory danych
 
