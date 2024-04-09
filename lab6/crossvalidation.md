@@ -73,6 +73,50 @@ Istnieje kilka różnych metod kroswalidacji, z których najczęściej stosowany
 - K-krotna kroswalidacja (k-fold cross-validation):
     - W tej metodzie dane dzielone są na k równych części (k-fold), gdzie każda część pełni rolę zbioru testowego dokładnie raz, a pozostałe części są używane jako zbiór treningowy. Następnie model trenowany jest k razy, każdorazowo na innych danych treningowych, a wyniki są uśredniane.
 
+```python
+# instalację biblioteki nalezy wykonać komendy:
+# pip install ucimlrepo
+# pip install certifi
+import numpy as np
+from ucimlrepo import fetch_ucirepo
+import pandas as pd
+
+# Pobranie danych z repozytorium jeśli plik nie jest zapisany lokalnie
+try:
+    data = pd.read_csv("iris.csv", index_col=0)
+except:
+    iris = fetch_ucirepo(id=53)
+    data = iris.data.features
+    data["label"] = iris.data.targets
+    data.to_csv("iris.csv")
+
+
+def k_fold_cross_validation(data, k=5):
+    X = data.iloc[:, :-1]
+    y = data.iloc[:, -1]
+
+    # Zdefiniowanie rozmiaru podzbioru
+    subset_size = len(data) // k
+    indices = np.arange(len(data))
+    np.random.shuffle(indices)
+
+    # Pętla wykonywana k razy
+    for i in range(k):
+        # Podział danych na zbiór treningowy i walidacyjny
+        test_indices = indices[i * subset_size: (i + 1) * subset_size]
+        train_indices = np.concatenate([indices[:i * subset_size], indices[(i + 1) * subset_size:]])
+
+        X_train, X_test = X.iloc[train_indices], X.iloc[test_indices]
+        y_train, y_test = y.iloc[train_indices], y.iloc[test_indices]
+        yield X_train, y_train, X_test, y_test
+
+
+for iteration, (X_train, y_train, X_test, y_test) in enumerate(k_fold_cross_validation(data, 5)):
+    print("Iteracja", iteration, "Dane treningowe", len(X_train), "Dane testowe", len(X_test), "decyzje testowe",
+          y_test.to_numpy().ravel())
+
+```
+
 - K-krotna kroswalidacja stratyfikowana (stratified k-fold cross-validation):
 
     - Jest to rozszerzenie k-krotnej kroswalidacji, w którym zachowuje się proporcje klas w każdej części podziału, co jest szczególnie ważne w przypadku niezrównoważonych zbiorów danych, gdzie jedna klasa może być znacznie liczniejsza od innych.
