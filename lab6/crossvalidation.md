@@ -10,7 +10,20 @@ W praktyce, dobór optymalnej wartości współczynnika momentum oraz współczy
 
 ## Krosswalidacja
 
-Metody kroswalidacji są niezwykle ważnym narzędziem w ocenie wydajności modeli uczenia maszynowego oraz w procesie doboru optymalnych hiperparametrów. Pozwalają one na dokładną ocenę wydajności modelu poprzez podział dostępnych danych na zbiór treningowy i testowy w sposób powtarzalny i obiektywny.
+Podział na zbiór treningowy i testowy to jedna z podstawowych technik walidacji modelu, która jest wykorzystywana w połączeniu z metodami kroswalidacji. Ta technika polega na podziale dostępnych danych na dwa niezależne zbiory: zbiór treningowy, na którym trenowany jest model, oraz zbiór testowy, który służy do oceny wydajności modelu.
+
+Podział ten jest zazwyczaj wykonywany w następujących proporcjach:
+
+- Zbiór treningowy: większy podzbiór danych, na którym model jest uczony. Zawiera zazwyczaj od 60% do 80% dostępnych danych.
+- Zbiór testowy: mniejszy podzbiór danych, który służy do oceny wydajności modelu. Zawiera zazwyczaj od 20% do 40% dostępnych danych.
+
+Podział na zbiór treningowy i testowy ma na celu zapewnienie niezależnej oceny modelu. Dzięki temu model jest trenowany na jednym zbiorze danych, a jego wydajność jest oceniana na drugim, który nie był używany w procesie trenowania. Pozwala to na obiektywne określenie, jak dobrze model generalizuje się na nowe, nieznane dane.
+
+W praktyce, podział na zbiór treningowy i testowy może być wykonany losowo, biorąc pod uwagę, że próbki w obu zbiorach są reprezentatywne dla całego zbioru danych. Jednakże, aby zapewnić wiarygodność oceny wydajności modelu, ważne jest, aby zachować tę samą proporcję klas (w przypadku problemów klasyfikacyjnych) w obu zbiorach. W przypadku problemów regresji, należy także zadbać o zachowanie rozkładu wartości docelowych.
+
+Podział na zbiór treningowy i testowy jest często wykonywany raz, na początku eksperymentu. Następnie na zbiorze treningowym stosuje się metodę kroswalidacji, aby dostarczyć modelowi wielu różnych prób danych treningowych, które mogą poprawić jego ogólną zdolność do generalizacji. Na końcu, ostateczna ocena wydajności modelu jest dokonywana na zbiorze testowym, który był wyłączony od początku analizy.
+
+Udoskonaleniem podziału na zbiór testowy i treningowy aby uzyskać jeszcze lepszą generalizację są metody kroswalidacji. Pozwalają one na dokładną ocenę wydajności modelu poprzez podział dostępnych danych na zbiór treningowy i testowy w sposób powtarzalny i obiektywny.
 
 Istnieje kilka różnych metod kroswalidacji, z których najczęściej stosowanymi są:
 
@@ -21,7 +34,6 @@ Istnieje kilka różnych metod kroswalidacji, z których najczęściej stosowany
 
     - Jest to rozszerzenie k-krotnej kroswalidacji, w którym zachowuje się proporcje klas w każdej części podziału, co jest szczególnie ważne w przypadku niezrównoważonych zbiorów danych, gdzie jedna klasa może być znacznie liczniejsza od innych.
 
-Ta metoda polega na wielokrotnym powtórzeniu k-krotnej kroswalidacji, co pozwala na uzyskanie bardziej stabilnych wyników poprzez uśrednienie wyników z wielu różnych podziałów danych.
 - Walidacja krzyżowa z jednym wyłączonym (leave-one-out cross-validation, LOOCV):
 
     - Jest to skrajna forma k-krotnej kroswalidacji, gdzie k jest równe liczbie próbek w zbiorze danych. Dla każdej iteracji jedna próbka jest wyłączana jako zbiór testowy, a pozostałe próbki służą jako zbiór treningowy.
