@@ -121,9 +121,107 @@ for iteration, (X_train, y_train, X_test, y_test) in enumerate(k_fold_cross_vali
 
     - Jest to rozszerzenie k-krotnej kroswalidacji, w którym zachowuje się proporcje klas w każdej części podziału, co jest szczególnie ważne w przypadku niezrównoważonych zbiorów danych, gdzie jedna klasa może być znacznie liczniejsza od innych.
 
+```python
+# instalację biblioteki nalezy wykonać komendy:
+# pip install ucimlrepo
+# pip install certifi
+from collections import Counter
+
+import numpy as np
+from ucimlrepo import fetch_ucirepo
+import pandas as pd
+
+# Pobranie danych z repozytorium jeśli plik nie jest zapisany lokalnie
+try:
+    data = pd.read_csv("iris.csv", index_col=0)
+except:
+    iris = fetch_ucirepo(id=53)
+    data = iris.data.features
+    data["label"] = iris.data.targets
+    data.to_csv("iris.csv")
+
+data1 = data.iloc[:50]
+data1 = np.concatenate([data1, data.iloc[50:90]])
+data1 = np.concatenate([data1, data.iloc[100:130]])
+
+
+# print(data1)
+def stratified_k_fold_cross_validation(data, k=5):
+    X = data[:, :-1]
+    y = data[:, -1]
+    # print(Counter(y))
+    # Przygotowanie stratyfikowanych indeksów
+    unique_labels = np.unique(y)
+    label_indices = {label: np.where(y == label)[0] for label in unique_labels}
+
+    # Zliczenie minimalnej liczby obserwacji dla każdej klasy
+    min_samples = {label: len(label_indices[label]) for label in unique_labels}
+    subset_size = {label: min_samples[label] // k for label in unique_labels}
+
+    # Pętla wykonywana k razy
+    for i in range(k):
+        train_indices = []
+        test_indicies = []
+
+        # Podział danych na zbiór treningowy i walidacyjny z zachowaniem stratyfikacji
+        for label in unique_labels:
+            label_samples = label_indices[label]
+            np.random.shuffle(label_samples)
+            test_indicies.extend(label_samples[i * subset_size[label]: (i + 1) * subset_size[label]])
+            train_indices.extend(label_samples[:i * subset_size[label]])
+            train_indices.extend(label_samples[(i + 1) * subset_size[label]:])
+
+        X_train, X_test = X[train_indices], X[test_indicies]
+        y_train, y_test = y[train_indices], y[test_indicies]
+
+        yield X_train, y_train, X_test, y_test
+
+
+for iteration, (X_train, y_train, X_test, y_test) in enumerate(stratified_k_fold_cross_validation(data1, 5)):
+    print("Iteracja", iteration, "Dane treningowe", len(X_train), "Dane testowe", len(X_test),
+          "liczebność klas w zbiorze testowym", Counter(y_test))
+
+```
+
 - Walidacja krzyżowa z jednym wyłączonym (leave-one-out cross-validation, LOOCV):
 
     - Jest to skrajna forma k-krotnej kroswalidacji, gdzie k jest równe liczbie próbek w zbiorze danych. Dla każdej iteracji jedna próbka jest wyłączana jako zbiór testowy, a pozostałe próbki służą jako zbiór treningowy.
+
+```python
+# instalację biblioteki nalezy wykonać komendy:
+# pip install ucimlrepo
+# pip install certifi
+from collections import Counter
+
+import numpy as np
+from ucimlrepo import fetch_ucirepo
+import pandas as pd
+
+# Pobranie danych z repozytorium jeśli plik nie jest zapisany lokalnie
+try:
+    data = pd.read_csv("iris.csv", index_col=0)
+except:
+    iris = fetch_ucirepo(id=53)
+    data = iris.data.features
+    data["label"] = iris.data.targets
+    data.to_csv("iris.csv")
+
+
+# print(data1)
+def Leave_One_out(data, k=5):
+    X = data.iloc[:, :-1]
+    y = data.iloc[:, -1]
+
+    for index in range(len(X)):
+        X_train, X_test = X.loc[X.index != index], X.iloc[index]
+        y_train, y_test = y.loc[y.index != index], y.iloc[index]
+        yield X_train, y_train, [X_test], [y_test]
+
+
+for iteration, (X_train, y_train, X_test, y_test) in enumerate(Leave_One_out(data, 5)):
+    print("Iteracja", iteration, "Dane treningowe", len(X_train), "Dane testowe", len(X_test),y_test)
+
+```
 
 Wszystkie te metody mają na celu zapewnienie obiektywnej i rzetelnej oceny wydajności modelu oraz zmniejszenie ryzyka nadmiernego dopasowania (overfitting) poprzez ocenę na danych, które nie były używane podczas procesu trenowania. Wybór konkretnej metody kroswalidacji zależy od charakterystyki danych oraz konkretnego problemu, który chcemy rozwiązać.
 
