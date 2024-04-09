@@ -23,7 +23,50 @@ W praktyce, podział na zbiór treningowy i testowy może być wykonany losowo, 
 
 Podział na zbiór treningowy i testowy jest często wykonywany raz, na początku eksperymentu. Następnie na zbiorze treningowym stosuje się metodę kroswalidacji, aby dostarczyć modelowi wielu różnych prób danych treningowych, które mogą poprawić jego ogólną zdolność do generalizacji. Na końcu, ostateczna ocena wydajności modelu jest dokonywana na zbiorze testowym, który był wyłączony od początku analizy.
 
-Udoskonaleniem podziału na zbiór testowy i treningowy aby uzyskać jeszcze lepszą generalizację są metody kroswalidacji. Pozwalają one na dokładną ocenę wydajności modelu poprzez podział dostępnych danych na zbiór treningowy i testowy w sposób powtarzalny i obiektywny.
+Przykładowy kod train test split:
+
+```python
+# instalację biblioteki nalezy wykonać komendy:
+# pip install ucimlrepo
+# pip install certifi
+
+from ucimlrepo import fetch_ucirepo
+import pandas as pd
+
+# Pobranie danych z repozytorium jeśli plik nie jest zapisany lokalnie
+try:
+    data = pd.read_csv("iris.csv", index_col=0)
+except:
+    iris = fetch_ucirepo(id=53)
+    data = iris.data.features
+    data["label"] = iris.data.targets
+    data.to_csv("iris.csv")
+
+
+def train_test_split(data, train_ratio):
+    print(data)
+    X = data.iloc[:, :-1]
+    y = data.iloc[:, -1]
+
+    train_size = int(X.shape[0] * train_ratio)
+
+    # Wyłonienie zbiorów testowych i treningowych
+    X_train = X[0:train_size]
+    X_test = X[train_size:]
+
+    y_train = y[0:train_size]
+    y_test = y[train_size:]
+    return X_train, y_train, X_test, y_test
+
+
+X_train, y_train, X_test, y_test = train_test_split(data, 0.6)
+print(X_train)
+print("Dane treningowe", len(X_train))
+print("Dane testowe", len(X_test))
+
+```
+
+Udoskonaleniem podziału na zbiór testowy i treningowy, aby uzyskać jeszcze lepszą generalizację są metody kroswalidacji. Pozwalają one na dokładną ocenę wydajności modelu poprzez podział dostępnych danych na zbiór treningowy i testowy w sposób powtarzalny i obiektywny.
 
 Istnieje kilka różnych metod kroswalidacji, z których najczęściej stosowanymi są:
 
