@@ -20,8 +20,8 @@
 ### Lab6
 <a href="lab6/crossvalidation.html">Udoskonalenia backpropagaction, preprocesing danych oraz badanie skuteczności modelu</a>
 
-### Lab6
-<a href="lab6/missing_values.html">Brakujące wartości</a>
+### Lab7
+<a href="lab7/missing_values.html">Brakujące wartości</a>
 
 ## Zbiory danych
 
