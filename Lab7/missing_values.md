@@ -47,9 +47,7 @@ Przygoruj 3 wersje zbioru danych iris (https://archive.ics.uci.edu/dataset/53/ir
 - Zbiór gdzie usunięto 10% wartości
 - Zbiór gdzie usunięto 20% wartości
 
-W zbiorach gdzie usunięto wartości uzupełnij je na 4 rózne wybrane sposoby uzupełniania brakujących wartości (np. średnia, mediana, wartość zero, minimum). Sumarycznie ma powstać 13 zbiorów danych.
-
-Nstępnie zaproponuj model sieci neuronowej który zostannie zwalidowany 10 krotną kroswalidacją na przygotowanych zbiorach danych. Rezultaty z każdego eksperymentu zbierz w arkuszu excel.
+Nstępnie zaproponuj model sieci neuronowej który zostannie zwalidowany 10 krotną kroswalidacją na przygotowanych zbiorach danych. Rezultaty z każdego eksperymentu zbierz w arkuszu excel. W zbiorach gdzie usunięto wartości uzupełnij je na 4 rózne wybrane sposoby uzupełniania brakujących wartości (np. średnia, mediana, wartość zero, minimum). Sumarycznie ma powstać 13 zbiorów danych.
 
 !UWAGA wyliczając średnią do uzupenienia wartości należy wyliczyć ją tylko na zbiorze treningowym.
 
