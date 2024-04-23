@@ -1,3 +1,5 @@
+### Brakujące dane
+
 #### Brakujące dane mogą wystąpić z różnych powodów, takich jak:
 
 1. Błędy ludzkie w zbieraniu danych: np. respondent nie udzielił odpowiedzi na pytanie w ankiecie.
@@ -15,6 +17,8 @@
 1. Usunięcie obserwacji z brakującymi danymi: Może być stosowane, gdy brakujące dane są niewielkie lub gdy usuwanie ich nie wpływa znacząco na wyniki analizy.
 2. Uzupełnienie brakujących danych: Można to zrobić, na przykład, poprzez uzupełnienie brakujących wartości średnią, medianą lub wartością modalną danej cechy, bądź stosując bardziej zaawansowane metody imputacji danych.
 3. Uwzględnienie brakujących danych w modelach: Niektóre modele potrafią radzić sobie z brakującymi danymi bez potrzeby ich uzupełniania, na przykład drzewa decyzyjne.
+
+### Skalowanie
 
 ## Zadania
 
@@ -52,3 +56,50 @@ Nstępnie zaproponuj model sieci neuronowej który zostannie zwalidowany 10 krot
 !UWAGA wyliczając średnią do uzupenienia wartości należy wyliczyć ją tylko na zbiorze treningowym.
 
 Porównaj wyniki wskazując która metoda uzupełniania brakujących wartości sprawdzi się najlepiej.
+
+
+## Preprocessing
+
+Załóż konto na platformie kaggle.com a następnie zapoznaj się ze zbiorem danych: https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import Normalizer
+
+data = pd.read_csv("train.csv", index_col="Id")
+train_data = data.iloc[:, :-1]
+y = data.iloc[:, -1]
+
+
+class Preprocesser:
+
+    # w polach klasy będziemy przechowywać modele i dane np średnie np. używane do uzupełnienia braków wartości
+    def __init__(self):
+        self.columns_with_nans_5 = []
+
+    def fit(self, data):
+        print("Nazwa kolumnt \t\t % brakujących wartości")
+        for column_name in data.columns[:-1]:  # iterujemy po kolumnach oprócz klasy decyzyjnej
+            nan_ratio = data[column_name].isna().sum() / data[column_name].__len__()
+            print(f"{column_name} \t\t\t{nan_ratio}")
+            if nan_ratio > 0.05: self.columns_with_nans_5.append(column_name)
+
+    def transform(self, data):
+        data = data.drop(columns=self.columns_with_nans_5)
+        return data
+
+
+prep = Preprocesser()
+prep.fit(train_data)
+
+train_prepared = prep.transform(train_data)
+print("dane przed usunięcem kolumn gdzie ilość brakujacych wartości przekracza 5%:", train_data.shape)
+print("dane po usunięciu:", train_prepared.shape)
+
+test_data = pd.read_csv("test.csv", index_col="Id")
+test_prepared = prep.transform(test_data)
+print("dane przed usunięcem kolumn gdzie ilość brakujacych wartości przekracza 5%:", test_data.shape)
+print("dane po usunięciu:", test_prepared.shape)
+
+```
