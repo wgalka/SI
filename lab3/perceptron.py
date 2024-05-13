@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
 # OR gate dataset
 X_or = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 np.savetxt('lab3/or.data', X_or, delimiter=',', header='x,y', comments='')
