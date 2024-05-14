@@ -113,9 +113,9 @@ $$
 RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
 $$
 
-### $\`R^2\`$ Score
+### $R^2$ Score
 
-$`R^2`$ Score, znany również jako współczynnik determinacji, mierzy, jak dobrze model regresji dopasowuje się do danych. Przyjmuje wartość między 0 a 1, gdzie 1 oznacza idealne dopasowanie modelu do danych, a 0 oznacza brak dopasowania. R^2 Score jest szczególnie przydatny do porównywania różnych modeli regresji.
+$R^2$ Score, znany również jako współczynnik determinacji, mierzy, jak dobrze model regresji dopasowuje się do danych. Przyjmuje wartość między 0 a 1, gdzie 1 oznacza idealne dopasowanie modelu do danych, a 0 oznacza brak dopasowania. R^2 Score jest szczególnie przydatny do porównywania różnych modeli regresji.
 
 $$
 R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
@@ -124,10 +124,10 @@ $$
 
 
 Gdzie:
-- $\`n\`$ liczba próbek w zbiorze danych,
-- $\`y_i\`$ prawdziwa decyzja dla i tej próbki,
-- $\`\hat{y}_i\`$ wartość przewidziana przez model dla itej próbki,
-- $\`\bar{y}\`$ średnia wartość decyzji w zbiorze danych
+- $n$ liczba próbek w zbiorze danych,
+- $y_i$ prawdziwa decyzja dla i tej próbki,
+- $\hat{y}_i$ wartość przewidziana przez model dla itej próbki,
+- $\bar{y}$ średnia wartość decyzji w zbiorze danych
 
 ***
 
@@ -227,12 +227,12 @@ plt.show()
 ### Zadanie 1: Interpolacja funkcji \( y = \sin(x) \) za pomocą sieci neuronowej
 
 **Opis zadania:**
-Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji sinusoidalnej $`\( y = \sin(x) )\`$, przy użyciu punktów (x, y) w postaci danych uczących. Przeprowadzimy badania mające na celu zrozumienie wpływu różnych czynników na jakość interpolacji, w tym liczby punktów w zbiorze uczącym, liczby neuronów w warstwie wejściowej oraz wartości funkcji celu (kryterium zatrzymania trenowania). Do oceny jakości interpolacji użyjemy błędu średniokwadratowego.
+Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji sinusoidalnej $( y = \sin(x) )$, przy użyciu punktów (x, y) w postaci danych uczących. Przeprowadzimy badania mające na celu zrozumienie wpływu różnych czynników na jakość interpolacji, w tym liczby punktów w zbiorze uczącym, liczby neuronów w warstwie wejściowej oraz wartości funkcji celu (kryterium zatrzymania trenowania). Do oceny jakości interpolacji użyjemy błędu średniokwadratowego.
 
 **Badane czynniki:**
 1. Liczba punktów w zbiorze uczącym:
-   - $\` x = 0:0.2:4\pi \`$
-   - $\` x = 0:0.1:4\pi \`$
+   - $x = 0:0.2:4\pi$
+   - $x = 0:0.1:4\pi$
 
 2. Liczba neuronów w warstwie ukrytej:
    - 3, 5, 7, 10, 30, 50, 100
@@ -247,12 +247,12 @@ Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji s
 ### Zadanie 1: Interpolacja funkcji $ y = \sin(x) $ za pomocą sieci neuronowej
 
 **Opis zadania:**
-Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji sinusoidalnej $ y = \sin(x) $, przy użyciu punktów (x, y) w postaci danych uczących. Przeprowadzimy badania mające na celu zrozumienie wpływu różnych czynników na jakość interpolacji, w tym liczby punktów w zbiorze uczącym, liczby neuronów w warstwie wejściowej oraz wartości funkcji celu (kryterium zatrzymania trenowania). Do oceny jakości interpolacji użyjemy błędu średniokwadratowego.
+Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji sinusoidalnej $y = \sin(x)$, przy użyciu punktów (x, y) w postaci danych uczących. Przeprowadzimy badania mające na celu zrozumienie wpływu różnych czynników na jakość interpolacji, w tym liczby punktów w zbiorze uczącym, liczby neuronów w warstwie wejściowej oraz wartości funkcji celu (kryterium zatrzymania trenowania). Do oceny jakości interpolacji użyjemy błędu średniokwadratowego.
 
 **Badane czynniki:**
 1. Liczba punktów w zbiorze uczącym:
-   - $ x = 0:0.2:4\pi $
-   - $ x = 0:0.1:4\pi $
+   - $x = 0:0.2:4\pi$
+   - $x = 0:0.1:4\pi$
 2. Liczba neuronów w warstwie ukrytej:
    - 3, 5, 7, 10, 30, 50, 100
 
@@ -266,7 +266,7 @@ Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji s
 Do oceny jakości interpolacji użyjemy błędu średniokwadratowego (MSE).
 
 **Kroki do wykonania:**
-1. Przygotowanie danych: Generacja punktów (x, y) na podstawie funkcji $ y = \sin(x) $.
+1. Przygotowanie danych: Generacja punktów (x, y) na podstawie funkcji $y = \sin(x)$.
 2. Definiowanie modelu sieci neuronowej: Stworzenie modelu z jedną warstwą ukrytą.
 3. Trenowanie modelu: Trenowanie modelu dla różnych wartości liczby neuronów w warstwie ukrytej i wartości funkcji celu. W przypadku, gdy wartość funkcji celu spadnie poniżej ustalonego progu, trenowanie zostanie przerwane.
 4. Ocena modelu: Ocena jakości interpolacji na zbiorze testowym.
