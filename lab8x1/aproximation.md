@@ -2,7 +2,7 @@
 
 ## Budowa sieci neuronowej w Pytorch
 
-https://pytorch.org/tutorials/recipes/recipes/defining_a_neural_network.html
+<https://pytorch.org/tutorials/recipes/recipes/defining_a_neural_network.html>
 
 Zacznijmy od przykładu sieci neuronowej w `Pytorch` składającej się z 1 warstwy wejściowej, 1 warstwy ukrytej ukrytej i warstwy wyjściowej. Warstwa ukryta będzie mieć funkcję sigmoidalną aktywacji natomiast wyjściowa Relu.
 
@@ -133,7 +133,7 @@ Gdzie:
 
 W bibliotece `scikit-learn` znajdują się gotowe implementacje powyższych funkcji.
 
-https://scikit-learn.org/stable/
+<https://scikit-learn.org/stable/>
 
 - [MSE](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)
 
