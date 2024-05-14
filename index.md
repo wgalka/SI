@@ -27,7 +27,7 @@
 <a href="lab8/approciamtion.html">proksymacja sztuczną siecią neuronową</a>
 
 ### Lab9
-<a href="Lab9/classification.html">Sieci neuronowe w zadaniach identyfikacji i klasyfikacji </a>
+<a href="lab9/classification.html">Sieci neuronowe w zadaniach identyfikacji i klasyfikacji </a>
 
 ## Zbiory danych
 
