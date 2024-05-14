@@ -113,9 +113,9 @@ $$
 RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
 $$
 
-### $R^2$ Score
+### $\`R^2\`$ Score
 
-$R^2$ Score, znany również jako współczynnik determinacji, mierzy, jak dobrze model regresji dopasowuje się do danych. Przyjmuje wartość między 0 a 1, gdzie 1 oznacza idealne dopasowanie modelu do danych, a 0 oznacza brak dopasowania. R^2 Score jest szczególnie przydatny do porównywania różnych modeli regresji.
+$`R^2`$ Score, znany również jako współczynnik determinacji, mierzy, jak dobrze model regresji dopasowuje się do danych. Przyjmuje wartość między 0 a 1, gdzie 1 oznacza idealne dopasowanie modelu do danych, a 0 oznacza brak dopasowania. R^2 Score jest szczególnie przydatny do porównywania różnych modeli regresji.
 
 $$
 R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
@@ -124,10 +124,10 @@ $$
 
 
 Gdzie:
-- $n$ liczba próbek w zbiorze danych,
-- $y_i$ prawdziwa decyzja dla i tej próbki,
-- $\hat{y}_i$ wartość przewidziana przez model dla itej próbki,
-- $\bar{y}$ średnia wartość decyzji w zbiorze danych
+- $\`n\`$ liczba próbek w zbiorze danych,
+- $\`y_i\`$ prawdziwa decyzja dla i tej próbki,
+- $\`\hat{y}_i\`$ wartość przewidziana przez model dla itej próbki,
+- $\`\bar{y}\`$ średnia wartość decyzji w zbiorze danych
 
 ***
 
