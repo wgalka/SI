@@ -21,13 +21,13 @@
 <a href="lab6/crossvalidation.html">Udoskonalenia backpropagaction, preprocesing danych oraz badanie skuteczności modelu</a>
 
 ### Lab7
-<a href="Lab7x1/missing_values.html">Brakujące wartości</a>
+<a href="lab7x1/missing_values.html">Brakujące wartości</a>
 
 ### Lab8
-<a href="Lab8x1/aproximation.html">proksymacja sztuczną siecią neuronową</a>
+<a href="lab8x1/aproximation.html">proksymacja sztuczną siecią neuronową</a>
 
 ### Lab9
-<a href="Lab9x1/classification.html">Sieci neuronowe w zadaniach identyfikacji i klasyfikacji </a>
+<a href="lab9x1/classification.html">Sieci neuronowe w zadaniach identyfikacji i klasyfikacji </a>
 
 ## Zbiory danych
 
