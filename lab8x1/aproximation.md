@@ -233,8 +233,8 @@ Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji s
 
 **Badane czynniki:**
 1. Liczba punktów w zbiorze uczącym:
-   - $$x = 0:0.2:4\pi$$
-   - $$x = 0:0.1:4\pi$$
+   - $$[x = 0:0.2:4\pi]$$
+   - $$[x = 0:0.1:4\pi]$$
 2. Liczba neuronów w warstwie ukrytej:
    - 3, 5, 7, 10, 30, 50, 100
 

@@ -7,7 +7,7 @@ Regresja to jedno z podstawowych zagadnień w uczeniu maszynowym, które zajmuje
 
 1. Zmienna zależna jest ciągła.
 2. Cel to znalezienie funkcji, która najlepiej odwzorowuje zależności między cechami a wartością przewidywaną.
-3. Do oceny jakości modelu stosuje się metryki takie jak błąd średniokwadratowy (MSE) lub współczynnik determinacji ($R^2 score$).
+3. Do oceny jakości modelu stosuje się metryki takie jak błąd średniokwadratowy (MSE) lub współczynnik determinacji ($$R^2 score$$).
 
 ## Problem klasyfikacji
 
@@ -23,7 +23,7 @@ Klasyfikacja jest innym ważnym zadaniem w uczeniu maszynowym, które polega na 
 
 - Typ zmiennej zależnej: W regresji zmienna zależna jest ciągła, podczas gdy w klasyfikacji jest dyskretna.
 - Cel: W regresji celem jest przewidywanie wartości ciągłych, natomiast w klasyfikacji celem jest przypisanie obiektów do określonych klas.
-- Metryki oceny: W regresji stosuje się metryki takie jak błąd średniokwadratowy (MSE) lub współczynnik determinacji ($R^2 score$ ), podczas gdy w klasyfikacji używane są metryki takie jak dokładność, krzywa ROC czy macierz pomyłek.
+- Metryki oceny: W regresji stosuje się metryki takie jak błąd średniokwadratowy (MSE) lub współczynnik determinacji ($$R^2 score$$ ), podczas gdy w klasyfikacji używane są metryki takie jak dokładność, krzywa ROC czy macierz pomyłek.
 
 W obu przypadkach, celem jest znalezienie modelu, który dobrze odwzorowuje zależności między cechami a wartością przewidywaną lub między cechami a klasami, jednakże techniki i metody stosowane w przypadku regresji różnią się od tych stosowanych w przypadku klasyfikacji.
 
@@ -53,26 +53,31 @@ W przypadku klasyfikacji binarnej (dwuklasowej), macierz pomyłek składa się z
 Macierz pomyłek pozwala na ocenę wydajności modelu klasyfikacyjnego poprzez obliczanie różnych metryk, takich jak:
 
 - **Dokładność (Accuracy):** Stosunek poprawnie sklasyfikowanych próbek do ogólnej liczby próbek.
+
 $$
 \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
 $$
 
 - **Czułość (Sensitivity):** Stosunek poprawnie sklasyfikowanych pozytywnych próbek do ogólnej liczby rzeczywistych pozytywnych próbek.
+
 $$
 \text{Sensitivity} = \frac{TP}{TP + FN}
 $$
 
 - **Specyficzność (Specificity):** Stosunek poprawnie sklasyfikowanych negatywnych próbek do ogólnej liczby rzeczywistych negatywnych próbek.
+
 $$
 \text{Specificity} = \frac{TN}{TN + FP}
 $$
 
 - **Precyzja (Precision):** Stosunek poprawnie sklasyfikowanych pozytywnych próbek do ogólnej liczby pozytywnych klasyfikacji.
+
 $$
 \text{Precision} = \frac{TP}{TP + FP}
 $$
 
 - **F1 Score:** Średnia harmoniczna między precyzją i czułością.
+
 $$
 \text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Sensitivity}}{\text{Precision} + \text{Sensitivity}}
 $$
