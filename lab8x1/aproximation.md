@@ -227,12 +227,12 @@ plt.show()
 ### Zadanie 1: Interpolacja funkcji \( y = \sin(x) \) za pomocą sieci neuronowej
 
 **Opis zadania:**
-Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji sinusoidalnej \( y = \sin(x) \), przy użyciu punktów (x, y) w postaci danych uczących. Przeprowadzimy badania mające na celu zrozumienie wpływu różnych czynników na jakość interpolacji, w tym liczby punktów w zbiorze uczącym, liczby neuronów w warstwie wejściowej oraz wartości funkcji celu (kryterium zatrzymania trenowania). Do oceny jakości interpolacji użyjemy błędu średniokwadratowego.
+Celem tego zadania jest projektowanie sieci neuronowej do interpolacji funkcji sinusoidalnej $`\( y = \sin(x) )\`$, przy użyciu punktów (x, y) w postaci danych uczących. Przeprowadzimy badania mające na celu zrozumienie wpływu różnych czynników na jakość interpolacji, w tym liczby punktów w zbiorze uczącym, liczby neuronów w warstwie wejściowej oraz wartości funkcji celu (kryterium zatrzymania trenowania). Do oceny jakości interpolacji użyjemy błędu średniokwadratowego.
 
 **Badane czynniki:**
 1. Liczba punktów w zbiorze uczącym:
-   - \( x = 0:0.2:4\pi \)
-   - \( x = 0:0.1:4\pi \)
+   - $\` x = 0:0.2:4\pi \`$
+   - $\` x = 0:0.1:4\pi \`$
 
 2. Liczba neuronów w warstwie ukrytej:
    - 3, 5, 7, 10, 30, 50, 100
