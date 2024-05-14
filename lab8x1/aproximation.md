@@ -124,7 +124,7 @@ $$
 
 
 Gdzie:
-- $`n`$ liczba próbek w zbiorze danych,
+- $$n$$ liczba próbek w zbiorze danych,
 - $y_i$ prawdziwa decyzja dla i tej próbki,
 - $\hat{y}_i$ wartość przewidziana przez model dla itej próbki,
 - $\bar{y}$ średnia wartość decyzji w zbiorze danych
