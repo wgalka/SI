@@ -29,6 +29,10 @@
 ### Lab9
 <a href="lab9x1/classification.html">Sieci neuronowe w zadaniach identyfikacji i klasyfikacji </a>
 
+### Lab10
+
+<a href=https://urstudrzeszow.sharepoint.com/:b:/r/sites/2024SI/Class%20Materials/si_lab10_Sieci%20neuronowe%20w%20zadaniach%20predykcji%20(przewidywania).pdf?csf=1&web=1&e=CGPGAE>SIECI NEURONOWE W ZADANIACH PREDYKCJI (PRZEWIDYWANIA)</a>
+
 ## Zbiory danych
 
 <https://www.kaggle.com/datasets>
