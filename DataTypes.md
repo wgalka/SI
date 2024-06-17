@@ -1,3 +1,5 @@
+mermaid: true
+
 # Typy danych w Uczeniu Maszynowym
 
 ```mermaid
