@@ -1,6 +1,6 @@
 # Typy danych w Uczeniu Maszynowym
 
-```mermaid!
+```mermaid
 graph TD;
     A-->B;
     A-->C;
