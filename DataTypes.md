@@ -1,4 +1,7 @@
+---
 mermaid: true
+mathjax: true
+---
 
 # Typy danych w Uczeniu Maszynowym
 
