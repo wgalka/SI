@@ -14,9 +14,9 @@
 #   - PULL_REQUEST_TEMPLATE.md
 
 # highlighter: rouge
-plugins:
-    - jekyll-remote-theme
-    - jekyll-mermaid
+# plugins:
+#     - jekyll-remote-theme
+#     - jekyll-mermaid
 
 # remote_theme: just-the-docs/just-the-docs
 # remote_theme: yous/whiteglass
