@@ -16,8 +16,7 @@
 # highlighter: rouge
 plugins:
     - jekyll-remote-theme
-
-gems: [jekyll-mermaid]
+    - jekyll-mermaid
 
 # remote_theme: just-the-docs/just-the-docs
 # remote_theme: yous/whiteglass
