@@ -387,3 +387,12 @@ p {
     text-align: justify;
     text-justify: auto ;
 }
+
+
+.bg-red{
+    background-color: rgb(255, 112, 112);
+}
+
+.bg-blue{
+    background-color: rgb(255, 112, 112);
+}
