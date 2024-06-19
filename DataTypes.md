@@ -18,7 +18,7 @@ mindmap
                 id("Czas: 12.34 sekundy, 1.23 godziny, 56 minut")
         id3["Jakościowe"]
             id5("Dane nominalne")
-                id("Płeć: Kobieta, Mężczyzna")
+                id)"Płeć: Kobieta, Mężczyzna"(
                 id("Kolor karoseri: Czerwony, Czzarny, ..")
                 id("Typ krwi: A, 0, B, AB")
             id5("Dane porzadkowe")
