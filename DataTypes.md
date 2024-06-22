@@ -26,3 +26,14 @@ mindmap
                 id("Poziom wykształcenia: Podstawowe, Średnie, Wyższe")
                 id("Oceny w szkole: Dopuszczający, Dostateczny, Dobry, Bardzo dobry, Celujący")
 </div>
+
+<div class="mermaid">
+classDiagram
+    classA <|-- Quantative
+    classA <|-- Qualitative
+    Quantative <|-- Discrete
+    Quantative <|-- Continious
+    Qualitative <|-- Nominal
+    Qualitative <|-- Ordinal
+    
+</div>
