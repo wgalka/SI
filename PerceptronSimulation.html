@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        canvas {
+            position: relative;
+            border: 1px solid black;
+        }
+    </style>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <h1>Perceptron</h1>
+
+    <h2>Historia</h2>
+    <p>W 1943 roku Warren Sturgis McCulloch wraz z Walter Harry Pitts, Jr. publikują pracę pod tytpułem <a href="https://h01-dot-neuroglancer-demo.appspot.com/#!%7B%22dimensions%22:%7B%22x%22:%5B8e-9%2C%22m%22%5D%2C%22y%22:%5B8e-9%2C%22m%22%5D%2C%22z%22:%5B3.3e-8%2C%22m%22%5D%7D%2C%22position%22:%5B359587.4375%2C120590.328125%2C3396.896728515625%5D%2C%22crossSectionScale%22:1.2917508812599137%2C%22projectionOrientation%22:%5B0.301570326089859%2C-0.7045446634292603%2C0.5164375305175781%2C0.3820529282093048%5D%2C%22projectionScale%22:30891.60168355824%2C%22layers%22:%5B%7B%22type%22:%22image%22%2C%22source%22:%22precomputed://gs://h01-release/data/20210601/4nm_raw%22%2C%22tab%22:%22source%22%2C%22name%22:%224nm%20EM%22%7D%2C%7B%22type%22:%22segmentation%22%2C%22source%22:%7B%22url%22:%22precomputed://gs://h01-release/data/20210601/c3%22%2C%22subsources%22:%7B%22default%22:true%2C%22bounds%22:true%2C%22properties%22:true%2C%22mesh%22:true%7D%2C%22enableDefaultSubsources%22:false%7D%2C%22tab%22:%22source%22%2C%22segments%22:%5B%22100192529568%22%2C%22100192544235%22%2C%22100207072444%22%2C%22100207086949%22%2C%22100221615582%22%2C%22100221615739%22%2C%22100250700371%22%2C%2212237931142%22%2C%2247015922306%22%2C%2247088591072%22%2C%2247088605473%22%2C%2247088605527%22%2C%2256346296840%22%2C%2256360839472%22%2C%2256375396626%22%2C%2256375396662%22%2C%2256419053748%22%2C%2256433596327%22%2C%2256433610954%22%2C%2264586238866%22%2C%2264673567789%22%2C%2264702740509%22%2C%2265313470870%22%2C%2265328028113%22%2C%2265328028132%22%2C%2265357113446%22%2C%2265357113478%22%2C%2265371656356%22%2C%2265386213657%22%2C%2265400770919%22%2C%2265502350168%22%2C%2265545977971%22%2C%2273814874175%22%2C%2273843974399%22%2C%2273843974858%22%2C%2273858517272%22%2C%2282578322221%22%2C%2291341769201%22%5D%2C%22segmentQuery%22:%2212237931142%2C%2047015922306%2C%2047088591072%2C%2047088605473%2C%2047088605527%2C%2056346296840%2C%2056360839472%2C%2056375396626%2C%2056375396662%2C%2056419053748%2C%2056433596327%2C%2056433610954%2C%2064586238866%2C%2064673567789%2C%2064702740509%2C%2065313470870%2C%2065328028113%2C%2065328028132%2C%2065357113446%2C%2065357113478%2C%2065371656356%2C%2065386213657%2C%2065400770919%2C%2065502350168%2C%2065545977971%2C%2073814874175%2C%2073843974399%2C%2073843974858%2C%2073858517272%2C%2082578322221%2C%2091341769201%2C%20100192529568%2C%20100192544235%2C%20100207072444%2C%20100207086949%2C%20100221615582%2C%20100221615739%2C%20100250700371%22%2C%22colorSeed%22:190293484%2C%22segmentColors%22:%7B%2265328028113%22:%22#ffaaaa%22%2C%2256360839472%22:%22#ffaaaa%22%2C%2247088605473%22:%22#ffaaaa%22%2C%22100221615582%22:%22#ffaaaa%22%2C%2265313470870%22:%22#ffaaaa%22%2C%2265400770919%22:%22#ffaaaa%22%2C%2273843974858%22:%22#ffaaaa%22%2C%2291341769201%22:%22#ffaaaa%22%2C%22100207072444%22:%22#ffaaaa%22%2C%22100207086949%22:%22#ffaaaa%22%2C%2273843974399%22:%22#ffaaaa%22%2C%2256375396662%22:%22#ffaaaa%22%2C%2265502350168%22:%22#ffaaaa%22%2C%2282578322221%22:%22#ffaaaa%22%2C%2264586238866%22:%22#ffaaaa%22%2C%2264673567789%22:%22#ffaaaa%22%2C%2273814874175%22:%22#ffaaaa%22%2C%2247088591072%22:%22#ffaaaa%22%2C%2256346296840%22:%22#ffaaaa%22%2C%2265545977971%22:%22#ffaaaa%22%2C%22100250700371%22:%22#ffaaaa%22%2C%22100221615739%22:%22#ffaaaa%22%2C%2256433596327%22:%22#ffaaaa%22%2C%2265371656356%22:%22#ffaaaa%22%2C%22100192529568%22:%22#ffaaaa%22%2C%2256433610954%22:%22#ffaaaa%22%2C%2265328028132%22:%22#ffaaaa%22%2C%2247088605527%22:%22#ffaaaa%22%2C%22100192544235%22:%22#ffaaaa%22%2C%2273858517272%22:%22#ffaaaa%22%2C%2265386213657%22:%22#ffaaaa%22%2C%2256419053748%22:%22#ffaaaa%22%2C%2264702740509%22:%22#ffaaaa%22%2C%2247015922306%22:%22#ffaaaa%22%2C%2265357113446%22:%22#ffaaaa%22%2C%2265357113478%22:%22#ffaaaa%22%2C%2256375396626%22:%22#ffaaaa%22%2C%2212237931142%22:%22#ffaaaa%22%7D%2C%22name%22:%22chandelier%22%7D%2C%7B%22type%22:%22segmentation%22%2C%22source%22:%22precomputed://gs://h01-release/data/20210601/c3%22%2C%22tab%22:%22source%22%2C%22objectAlpha%22:0.05%2C%22segments%22:%5B%222674319782%22%2C%222732066380%22%2C%223066808696%22%2C%223110363677%22%2C%223590605023%22%5D%2C%22segmentQuery%22:%222674319782%2C%202732066380%2C%203066808696%2C%203110363677%2C%203590605023%22%2C%22colorSeed%22:64560581%2C%22name%22:%22pyramidals%22%7D%2C%7B%22type%22:%22annotation%22%2C%22source%22:%22precomputed://gs://h01-release/data/20210601/c3/subcompartments/annotations%22%2C%22tab%22:%22source%22%2C%22shader%22:%22void%20main%28%29%20%7B%5Cn%20%20if%20%28prop_class_label%28%29%20==%200%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280%2C%200%2C%201%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%201%29%20%7B%5Cn%20%20%20%20setColor%28vec3%281%2C%200%2C%200%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%202%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280%2C%201%2C%200%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%203%29%20%7B%5Cn%20%20%20%20setColor%28vec3%281%2C%201%2C%201%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%204%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280.5%2C%200.5%2C%200%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%205%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280.5%2C%200.5%2C%201%29%29%3B%5Cn%20%20%7D%5Cn%7D%5Cn%22%2C%22linkedSegmentationLayer%22:%7B%22skeleton_id%22:%22chandelier%22%7D%2C%22filterBySegmentation%22:%5B%22skeleton_id%22%5D%2C%22name%22:%226-class%22%2C%22visible%22:false%7D%5D%2C%22showAxisLines%22:false%2C%22showDefaultAnnotations%22:false%2C%22showSlices%22:false%2C%22prefetch%22:false%2C%22layout%22:%7B%22type%22:%223d%22%2C%22orthographicProjection%22:true%7D%2C%22layerListPanel%22:%7B%22size%22:100%7D%7D">"A Logical Calculus of the Ideas Immanent in Nervous Activity"</a>
+    w której opisali prosty model neuronu, który działał jako jednostka logiczna. Ich model, znany jako model McCullocha-Pittsa, był pierwszym krokiem do stworzenia perceptronu.
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YUUzmF5QqE0?si=Ro7rip9BWdrzKolv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <p>W maju 2024 roku naukowcy stworzyli dokładną mapę wycinka mózgu o wielkości 1x1x1mm. Mapa zajmuje 1.4 petabajty. Poniżej jeden z typów neuronów występujących w ludzkim mózgu:
+    </p>
+        <iframe 
+    width="800"
+    height="800"
+    src="https://h01-dot-neuroglancer-demo.appspot.com/#!%7B%22dimensions%22:%7B%22x%22:%5B8e-9%2C%22m%22%5D%2C%22y%22:%5B8e-9%2C%22m%22%5D%2C%22z%22:%5B3.3e-8%2C%22m%22%5D%7D%2C%22position%22:%5B359587.4375%2C120590.328125%2C3396.896728515625%5D%2C%22crossSectionScale%22:1.2917508812599137%2C%22projectionOrientation%22:%5B0.301570326089859%2C-0.7045446634292603%2C0.5164375305175781%2C0.3820529282093048%5D%2C%22projectionScale%22:30891.60168355824%2C%22layers%22:%5B%7B%22type%22:%22image%22%2C%22source%22:%22precomputed://gs://h01-release/data/20210601/4nm_raw%22%2C%22tab%22:%22source%22%2C%22name%22:%224nm%20EM%22%7D%2C%7B%22type%22:%22segmentation%22%2C%22source%22:%7B%22url%22:%22precomputed://gs://h01-release/data/20210601/c3%22%2C%22subsources%22:%7B%22default%22:true%2C%22bounds%22:true%2C%22properties%22:true%2C%22mesh%22:true%7D%2C%22enableDefaultSubsources%22:false%7D%2C%22tab%22:%22source%22%2C%22segments%22:%5B%22100192529568%22%2C%22100192544235%22%2C%22100207072444%22%2C%22100207086949%22%2C%22100221615582%22%2C%22100221615739%22%2C%22100250700371%22%2C%2212237931142%22%2C%2247015922306%22%2C%2247088591072%22%2C%2247088605473%22%2C%2247088605527%22%2C%2256346296840%22%2C%2256360839472%22%2C%2256375396626%22%2C%2256375396662%22%2C%2256419053748%22%2C%2256433596327%22%2C%2256433610954%22%2C%2264586238866%22%2C%2264673567789%22%2C%2264702740509%22%2C%2265313470870%22%2C%2265328028113%22%2C%2265328028132%22%2C%2265357113446%22%2C%2265357113478%22%2C%2265371656356%22%2C%2265386213657%22%2C%2265400770919%22%2C%2265502350168%22%2C%2265545977971%22%2C%2273814874175%22%2C%2273843974399%22%2C%2273843974858%22%2C%2273858517272%22%2C%2282578322221%22%2C%2291341769201%22%5D%2C%22segmentQuery%22:%2212237931142%2C%2047015922306%2C%2047088591072%2C%2047088605473%2C%2047088605527%2C%2056346296840%2C%2056360839472%2C%2056375396626%2C%2056375396662%2C%2056419053748%2C%2056433596327%2C%2056433610954%2C%2064586238866%2C%2064673567789%2C%2064702740509%2C%2065313470870%2C%2065328028113%2C%2065328028132%2C%2065357113446%2C%2065357113478%2C%2065371656356%2C%2065386213657%2C%2065400770919%2C%2065502350168%2C%2065545977971%2C%2073814874175%2C%2073843974399%2C%2073843974858%2C%2073858517272%2C%2082578322221%2C%2091341769201%2C%20100192529568%2C%20100192544235%2C%20100207072444%2C%20100207086949%2C%20100221615582%2C%20100221615739%2C%20100250700371%22%2C%22colorSeed%22:190293484%2C%22segmentColors%22:%7B%2265328028113%22:%22#ffaaaa%22%2C%2256360839472%22:%22#ffaaaa%22%2C%2247088605473%22:%22#ffaaaa%22%2C%22100221615582%22:%22#ffaaaa%22%2C%2265313470870%22:%22#ffaaaa%22%2C%2265400770919%22:%22#ffaaaa%22%2C%2273843974858%22:%22#ffaaaa%22%2C%2291341769201%22:%22#ffaaaa%22%2C%22100207072444%22:%22#ffaaaa%22%2C%22100207086949%22:%22#ffaaaa%22%2C%2273843974399%22:%22#ffaaaa%22%2C%2256375396662%22:%22#ffaaaa%22%2C%2265502350168%22:%22#ffaaaa%22%2C%2282578322221%22:%22#ffaaaa%22%2C%2264586238866%22:%22#ffaaaa%22%2C%2264673567789%22:%22#ffaaaa%22%2C%2273814874175%22:%22#ffaaaa%22%2C%2247088591072%22:%22#ffaaaa%22%2C%2256346296840%22:%22#ffaaaa%22%2C%2265545977971%22:%22#ffaaaa%22%2C%22100250700371%22:%22#ffaaaa%22%2C%22100221615739%22:%22#ffaaaa%22%2C%2256433596327%22:%22#ffaaaa%22%2C%2265371656356%22:%22#ffaaaa%22%2C%22100192529568%22:%22#ffaaaa%22%2C%2256433610954%22:%22#ffaaaa%22%2C%2265328028132%22:%22#ffaaaa%22%2C%2247088605527%22:%22#ffaaaa%22%2C%22100192544235%22:%22#ffaaaa%22%2C%2273858517272%22:%22#ffaaaa%22%2C%2265386213657%22:%22#ffaaaa%22%2C%2256419053748%22:%22#ffaaaa%22%2C%2264702740509%22:%22#ffaaaa%22%2C%2247015922306%22:%22#ffaaaa%22%2C%2265357113446%22:%22#ffaaaa%22%2C%2265357113478%22:%22#ffaaaa%22%2C%2256375396626%22:%22#ffaaaa%22%2C%2212237931142%22:%22#ffaaaa%22%7D%2C%22name%22:%22chandelier%22%7D%2C%7B%22type%22:%22segmentation%22%2C%22source%22:%22precomputed://gs://h01-release/data/20210601/c3%22%2C%22tab%22:%22source%22%2C%22objectAlpha%22:0.05%2C%22segments%22:%5B%222674319782%22%2C%222732066380%22%2C%223066808696%22%2C%223110363677%22%2C%223590605023%22%5D%2C%22segmentQuery%22:%222674319782%2C%202732066380%2C%203066808696%2C%203110363677%2C%203590605023%22%2C%22colorSeed%22:64560581%2C%22name%22:%22pyramidals%22%7D%2C%7B%22type%22:%22annotation%22%2C%22source%22:%22precomputed://gs://h01-release/data/20210601/c3/subcompartments/annotations%22%2C%22tab%22:%22source%22%2C%22shader%22:%22void%20main%28%29%20%7B%5Cn%20%20if%20%28prop_class_label%28%29%20==%200%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280%2C%200%2C%201%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%201%29%20%7B%5Cn%20%20%20%20setColor%28vec3%281%2C%200%2C%200%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%202%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280%2C%201%2C%200%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%203%29%20%7B%5Cn%20%20%20%20setColor%28vec3%281%2C%201%2C%201%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%204%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280.5%2C%200.5%2C%200%29%29%3B%5Cn%20%20%7D%20else%20if%20%28prop_class_label%28%29%20==%205%29%20%7B%5Cn%20%20%20%20setColor%28vec3%280.5%2C%200.5%2C%201%29%29%3B%5Cn%20%20%7D%5Cn%7D%5Cn%22%2C%22linkedSegmentationLayer%22:%7B%22skeleton_id%22:%22chandelier%22%7D%2C%22filterBySegmentation%22:%5B%22skeleton_id%22%5D%2C%22name%22:%226-class%22%2C%22visible%22:false%7D%5D%2C%22showAxisLines%22:false%2C%22showDefaultAnnotations%22:false%2C%22showSlices%22:false%2C%22prefetch%22:false%2C%22layout%22:%7B%22type%22:%223d%22%2C%22orthographicProjection%22:true%7D%2C%22layerListPanel%22:%7B%22size%22:100%7D%7D"></iframe>
+    <form onsubmit="return false;">
+        <label for="inputNumber">Liczba wejść:</label><input id="inputNumber" type="number" min="1" max="11"
+            value="3"><br>
+
+        <label for="activationfunction">Funkcja aktywacji:</label>
+        <select id="activationfunction" name="nazwa">
+            <option>Funkcja unipolarna</option>
+            <option>Funkcja sigmoidalna</option>
+            <option>Funkcja liniowa</option>
+        </select>
+    </form>
+
+    </select><br>
+
+    <div id="weights"></div>
+    <!-- <button id="acceptParapeters">Akceptuj</button><br> -->
+    <canvas id="mojCanvas" width="800" height="800"></canvas>
+
+    <div>
+        Suma ważona + bias:
+        $$
+        z =\sum_{i=1}^{n} w_i x_i + b = w_1 x_1 + w_2 x_2 + \cdots + w_n x_n + b
+        $$
+    </div>
+    <div>
+        Funkcja unipolarna (heavyside):
+$$f(x) = 
+\begin{cases} 
+0 & \text{if } x < 0 \\ 
+1 & \text{if } x \geq 0 
+\end{cases}$$
+</div>
+
+<div>
+    Zatem wyjście perceptronu możemy określić nastepującym równaniem:
+    $$
+    \hat{y} = f(z) = f \left( \sum_{i=1}^{n} w_i x_i + b \right)
+    $$
+</div>
+
+    
+    <output id="output_log"></output>
+
+    <script>
+
+        let neuron_input = document.getElementById("inputNumber");
+        let output_log = document.getElementById("output_log");
+
+        var canvas = document.getElementById("mojCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#EFDFB0"
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        const inputRadius = 30;
+        const inputMargin = 5
+        const canvasWidth = canvas.width;
+        const canvasHeight = canvas.height;
+
+        const inputPositions = [];
+        const weightsPositions = [];
+        let sumationPosition = {x:null, y:null};
+        let activationfunctionPosition = {x:null, y:null};
+        let outputPosition = {x:null, y:null, value: null};
+        let biasPosition = {x:null, y:null, value:null};
+
+        function isInsideCircle(x, y, circle) {
+            const dx = x - circle.x;
+            const dy = y - circle.y;
+            return dx * dx + dy * dy <= inputRadius * inputRadius;
+        }
+
+        function calculatePositions(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            weights_block = document.getElementById("weights")
+            // Create weights form fields
+            if (neuron_input.value == inputPositions.length) {
+                return;
+            } else if (neuron_input.value > inputPositions.length) {
+                for (let i = inputPositions.length; i < neuron_input.value; i++) {
+                    // Create placeholders for drawing data
+                    inputPositions.push({ x: null, y: null, value: null })
+                    weightsPositions.push({ x: null, y: null, value: null })
+                }
+            } else {
+                while (inputPositions.length > neuron_input.value) {
+
+                    // Remove drawind data
+                    inputPositions.pop()
+                    weightsPositions.pop()
+                }
+            }
+
+            // Calculate positions for inputs and weights
+            const x = canvasWidth / 7;
+            const startY = canvasHeight / 2 - ((neuron_input.value - 1) * (inputRadius + inputMargin));
+            for (let i = 0; i < neuron_input.value; i++) {
+                const y = startY + i * 2 * (inputRadius + inputMargin);
+                inputPositions[i].x = x
+                inputPositions[i].y = y
+
+                weightsPositions[i].x = x * 2
+                weightsPositions[i].y = y
+            }
+            // Calculate position for sumation and activation function
+            sumationPosition = { x: x * 3, y: canvasHeight / 2 }
+            activationfunctionPosition = { x: x * 4, y: canvasHeight / 2 }
+            outputPosition.x = x * 5
+            outputPosition.y = canvasHeight / 2 
+            biasPosition.x = x * 3
+            biasPosition.y = canvasHeight / 3
+
+            ctx.lineWidth = 2;
+
+            drawCircles();
+        }
+
+
+        neuron_input.addEventListener("change", (event) => {
+            calculatePositions()
+        });
+
+        function drawCircles() {
+            console.log(inputPositions)
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+            // Draw inputs
+            inputPositions.forEach((pos, index) => {
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, inputRadius, 0, 2 * Math.PI);
+                ctx.stroke();
+                ctx.fillStyle = 'black';
+                ctx.textAlign = 'center';
+                ctx.font = `20px Arial`;
+                if (pos.value == null) {
+                    ctx.fillText(`x`, pos.x, pos.y + 5);
+                    const text_width = ctx.measureText("x").width;
+                    ctx.font = `10px Arial`;
+                    ctx.fillText(`${index + 1}`, pos.x + text_width, pos.y + (20) / 2);
+                } else {
+                    ctx.fillText(pos.value, pos.x, pos.y + 8);
+                }
+
+            });
+
+            // Draw weights
+            weightsPositions.forEach((pos, index) => {
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, inputRadius, 0, 2 * Math.PI);
+                ctx.stroke();
+                ctx.fillStyle = 'black';
+                ctx.textAlign = 'center';
+                ctx.font = `20px Arial`;
+                if (pos.value == null) {
+                    ctx.fillText(`w`, pos.x, pos.y + 5);
+                    const text_width = ctx.measureText("w").width;
+                    ctx.font = `10px Arial`;
+                    ctx.fillText(`${index + 1}`, pos.x + text_width - 4, pos.y + (20) / 2);
+                } else {
+                    ctx.fillText(pos.value, pos.x, pos.y + 8);
+                }
+            })
+
+            // Draw connections input-weights
+            for (let i = 0; i < inputPositions.length; i++) {
+                const input = inputPositions[i];
+                const weight = weightsPositions[i];
+                ctx.beginPath();
+                ctx.moveTo(input.x + inputRadius, input.y);
+                ctx.lineTo(weight.x - inputRadius, weight.y);
+                ctx.stroke();
+            }
+
+            // Draw summation
+            ctx.fillStyle = "black"
+            ctx.beginPath();
+            ctx.arc(sumationPosition.x, sumationPosition.y, 30, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.fillStyle = 'black';
+            ctx.textAlign = 'center';
+            ctx.font = `20px Arial`;
+            ctx.fillText(`∑`, sumationPosition.x, sumationPosition.y + 5);
+
+            // Draw connections weights-summation
+            for (let i = 0; i < inputPositions.length; i++) {
+                const weight = weightsPositions[i];
+                ctx.beginPath();
+                ctx.moveTo(weight.x + inputRadius, weight.y);
+                ctx.lineTo(sumationPosition.x - 30, sumationPosition.y);
+                ctx.stroke();
+            }
+
+            // Draw activation function
+            ctx.fillStyle = "black"
+            ctx.beginPath();
+            ctx.arc(activationfunctionPosition.x, activationfunctionPosition.y, 30, 0, 2 * Math.PI);
+            ctx.stroke();
+            // ctx.fillStyle = 'black';
+            // ctx.textAlign = 'center';
+            // ctx.fillText(`activation function`, activationfunctionPosition.x, activationfunctionPosition.y + 5);
+            // Set the line width and color
+            ctx.strokeStyle = 'black';
+
+            // Draw unipolar symbol
+            const width = 30;
+            const height = 20;
+            ctx.beginPath();
+            ctx.moveTo(activationfunctionPosition.x - (width / 2), activationfunctionPosition.y + (height / 2));
+            ctx.lineTo(activationfunctionPosition.x - (width / 2) + width / 2, activationfunctionPosition.y + (height / 2));
+            ctx.lineTo(activationfunctionPosition.x - (width / 2) + width / 2, activationfunctionPosition.y - height + (height / 2));
+            ctx.lineTo(activationfunctionPosition.x - (width / 2) + width, activationfunctionPosition.y - height + (height / 2));
+            ctx.stroke();
+
+            // Draw connection summation-activation
+            ctx.beginPath();
+            ctx.moveTo(sumationPosition.x + 30, sumationPosition.y);
+            ctx.lineTo(activationfunctionPosition.x - 30, activationfunctionPosition.y);
+            ctx.stroke();
+
+            // Draw output
+            ctx.fillStyle = "black"
+            ctx.beginPath();
+            ctx.arc(outputPosition.x, outputPosition.y, 30, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.fillStyle = 'black';
+            ctx.textAlign = 'center';
+            if(outputPosition.value == null){
+                ctx.fillText(`ŷ`, outputPosition.x, outputPosition.y + 5);
+            }else{
+                ctx.fillText(outputPosition.value, outputPosition.x, outputPosition.y + 5);
+            }
+            
+
+            // Draw connection activation-output
+            ctx.beginPath();
+            ctx.moveTo(activationfunctionPosition.x + 30, activationfunctionPosition.y);
+            ctx.lineTo(outputPosition.x - 30, outputPosition.y);
+            ctx.stroke();
+
+            // Draw bias
+            ctx.fillStyle = "black"
+            ctx.beginPath();
+            ctx.arc(biasPosition.x, biasPosition.y, 30, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.fillStyle = 'black';
+            ctx.textAlign = 'center';
+            if (biasPosition.value == null) {
+                ctx.fillText(`b`, biasPosition.x, biasPosition.y + 5);
+            } else {
+                ctx.fillText(biasPosition.value, biasPosition.x, biasPosition.y + 8);
+            }
+
+
+            // Draw connection bias-summation
+            ctx.beginPath();
+            ctx.moveTo(sumationPosition.x, sumationPosition.y - 30);
+            ctx.lineTo(biasPosition.x, biasPosition.y + 30);
+            ctx.stroke();
+        }
+
+        canvas.addEventListener('click', function (event) {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
+            for (let i = 0; i < inputPositions.length; i++) {
+                if (isInsideCircle(mouseX, mouseY, inputPositions[i])) {
+                    inputPositions[i].value = parseFloat(prompt(`Input ${i+1}:`));
+                    console.log(inputPositions.value)
+                    showEquations()
+                    drawCircles()
+                    MathJax.typeset();
+                }
+            }
+            for (let i =0;i<weightsPositions.length; i++){
+                if (isInsideCircle(mouseX, mouseY, weightsPositions[i])) {
+                    weightsPositions[i].value = parseFloat(prompt(`Weight ${i+1}:`));
+                    console.log(weightsPositions.value)
+                    showEquations()
+                    drawCircles()
+                    MathJax.typeset();
+                }
+            }
+
+            if (isInsideCircle(mouseX, mouseY, biasPosition)) {
+                    biasPosition.value = parseFloat(prompt(`Bias:`));
+                    console.log(biasPosition.value)
+                    showEquations()
+                    drawCircles()
+                    MathJax.typeset();
+                }
+
+        });
+
+        function showEquations(){
+           y_hat = 0
+           output_log.innerHTML = "$$z=";
+           for(let i=0;i<inputPositions.length;i++){
+
+                let inputValue = Math.round(inputPositions[i].value)
+                let weightValue = Math.round(weightsPositions[i].value)
+
+                y_hat += inputValue * weightValue
+
+                output_log.innerHTML += weightValue+" * "+inputValue  +" + "
+           }
+           let biasValue = Math.round(biasPosition.value);
+           y_hat += biasValue
+           output_log.innerHTML += biasValue + "=" + y_hat + "$$";
+
+           
+
+           if (y_hat >= 0){
+                output_log.innerHTML += "$$\\hat{y} = f("+y_hat+")=" +1+"$$"
+                outputPosition.value = 1
+           }
+           else{
+                output_log.innerHTML += "$$\\hat{y} = f("+y_hat+")=" +0+"$$"
+                outputPosition.value = 0
+           }
+        }
+
+        function test(){
+            neuron_input.value = 2;
+            biasPosition.value=0
+            calculatePositions()
+
+            inputPositions[0].value = 1
+            inputPositions[1].value = 0
+
+            weightsPositions[0].value = 0
+            weightsPositions[1].value = 0
+
+            biasPosition.value = 0
+
+            drawCircles();
+            showEquations();
+        }
+
+        // test();
+        calculatePositions()
+        showEquations()
+    </script>
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+</body>
+
+</html>
